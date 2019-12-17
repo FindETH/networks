@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getEtherBalances gets the Ether balance for multiple addresses 1`] = `
+Object {
+  "0x0000000000000000000000000000000000000000": "1",
+  "0x0000000000000000000000000000000000000001": "1",
+  "0x0000000000000000000000000000000000000002": "1",
+}
+`;
+
+exports[`getTokenBalances gets the token balance for multiple addresses 1`] = `
+Object {
+  "0x0000000000000000000000000000000000000000": "1",
+  "0x0000000000000000000000000000000000000001": "1",
+  "0x0000000000000000000000000000000000000002": "1",
+}
+`;
