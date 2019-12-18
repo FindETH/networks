@@ -28,11 +28,11 @@
     "prepare": "yarn run build"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0",
     "@ethersproject/providers": "^5.0.0-beta.146",
     "@mycrypto/eth-scan": "^1.1.0"
   },
   "peerDependencies": {
-    "@babel/runtime": "^7.0.0",
     "bignumber.js": "^9.0.0"
   },
   "devDependencies": {
