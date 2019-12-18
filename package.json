@@ -16,7 +16,9 @@
   ],
   "scripts": {
     "clean": "rimraf lib",
-    "build": "yarn run clean && tsc -p tsconfig.build.json",
+    "build": "yarn run clean && yarn run build:source && yarn run build:declarations",
+    "build:source": "cross-env NODE_ENV=production babel src --extensions '.ts' --source-maps --out-dir lib",
+    "build:declarations": "tsc -p tsconfig.build.json",
     "test": "jest",
     "lint": "yarn run lint:tsc && yarn run lint:tslint && yarn run lint:prettier",
     "lint:tsc": "tsc --noEmit",
@@ -26,6 +28,7 @@
     "prepare": "yarn run build"
   },
   "dependencies": {
+    "@babel/runtime": "^7.0.0",
     "@ethersproject/providers": "^5.0.0-beta.146",
     "@mycrypto/eth-scan": "^1.1.0"
   },
@@ -33,17 +36,18 @@
     "bignumber.js": "^9.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
     "@babel/plugin-proposal-optional-chaining": "^7.7.5",
     "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-typescript": "^7.7.4",
-    "@babel/runtime": "^7.7.6",
     "@types/jest": "^24.0.23",
     "babel-jest": "^24.9.0",
     "codecov": "^3.6.1",
     "core-js": "3",
+    "cross-env": "^6.0.3",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
