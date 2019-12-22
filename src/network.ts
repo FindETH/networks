@@ -1,4 +1,13 @@
-import { Provider } from '@ethersproject/providers';
+import {
+  EtherscanProvider,
+  FallbackProvider,
+  InfuraProvider,
+  JsonRpcProvider,
+  Provider,
+  Web3Provider
+} from '@ethersproject/providers';
+import { INFURA_PROJECT_ID, MYCRYPTO_JSONRPC_ENDPOINT } from './constants';
+import { getWeb3 } from './utils/window';
 
 export interface Network {
   name: 'Mainnet' | 'Testnet' | 'Unknown' | 'Offline';
@@ -23,6 +32,26 @@ export const NETWORK_UNKNOWN: Network = {
 export const NETWORK_OFFLINE: Network = {
   name: 'Offline',
   color: '#dcdcdc'
+};
+
+/**
+ * Get the default provider, which primarily uses MyCrypto's public API endpoint, and has fallbacks to Infura and
+ * Etherscan. If an injected Web3 provider is detected (e.g. MetaMask), that will be used instead.
+ *
+ * @param {number} [networkId=1]
+ * @return {Provider}
+ */
+export const getDefaultProvider = (networkId: number = 1): Provider => {
+  const web3 = getWeb3();
+  if (web3) {
+    return new Web3Provider(web3);
+  }
+
+  return new FallbackProvider([
+    new JsonRpcProvider(MYCRYPTO_JSONRPC_ENDPOINT, networkId),
+    new InfuraProvider(networkId, INFURA_PROJECT_ID),
+    new EtherscanProvider(networkId)
+  ]);
 };
 
 /**

@@ -1,3 +1,12 @@
+/* tslint:disable max-classes-per-file */
+export class EtherscanProvider {}
+
+export class FallbackProvider {}
+
+export class InfuraProvider {}
+
+export class Web3Provider {}
+
 export class JsonRpcProvider {
   constructor(private readonly url: string) {}
 
