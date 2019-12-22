@@ -2,23 +2,27 @@
   "name": "@findeth/networks",
   "version": "0.1.0",
   "description": "Library used by FindETH, which provides network functionality",
-  "main": "lib/index.js",
   "repository": "https://github.com/FindETH/networks.git",
   "author": "Maarten Zuidhoorn <maarten@zuidhoorn.com>",
   "license": "MIT",
-  "typings": "lib/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/es/index.js",
+  "typings": "typings/index.d.ts",
   "sideEffects": false,
   "engines": {
     "node": "12"
   },
   "files": [
     "lib",
-    "src"
+    "src",
+    "typings"
   ],
   "scripts": {
     "clean": "rimraf lib",
     "build": "yarn run clean && yarn run build:source && yarn run build:declarations",
-    "build:source": "cross-env NODE_ENV=production babel src --extensions '.ts' --source-maps --out-dir lib",
+    "build:source": "yarn run build:source:cjs && yarn run build:source:es",
+    "build:source:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --extensions '.ts' --source-maps --out-dir lib/cjs",
+    "build:source:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src --extensions '.ts' --source-maps --out-dir lib/es",
     "build:declarations": "tsc -p tsconfig.build.json",
     "test": "jest",
     "lint": "yarn run lint:tsc && yarn run lint:tslint && yarn run lint:prettier",
@@ -32,19 +36,15 @@
     "@mycrypto/eth-scan": "^1.1.0"
   },
   "peerDependencies": {
-    "@babel/runtime": "^7.0.0",
-    "@ethersproject/providers": "^5.0.0-beta.146",
-    "bignumber.js": "^9.0.0"
+    "@ethersproject/providers": "^5.0.0-beta.146"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
     "@babel/plugin-proposal-optional-chaining": "^7.7.5",
-    "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-typescript": "^7.7.4",
-    "@babel/runtime": "^7.7.6",
     "@ethersproject/providers": "^5.0.0-beta.146",
     "@types/jest": "^24.0.23",
     "babel-jest": "^24.9.0",
