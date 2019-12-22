@@ -1,6 +1,9 @@
+import { BigNumber } from '@ethersproject/bignumber';
 import { Provider } from '@ethersproject/providers';
-import EthScan, { EthersProvider } from '@mycrypto/eth-scan';
-import BigNumber from 'bignumber.js';
+import {
+  getEtherBalances as getEtherBalancesScanner,
+  getTokenBalances as getTokenBalancesScanner
+} from '@mycrypto/eth-scan';
 
 /**
  * Get Ether balances for multiple addresses.
@@ -10,9 +13,7 @@ import BigNumber from 'bignumber.js';
  * @return {Promise<Record<string, BigNumber>>}
  */
 export const getEtherBalances = (provider: Provider, addresses: string[]): Promise<Record<string, BigNumber>> => {
-  const scanner = new EthScan(new EthersProvider(provider));
-
-  return scanner.getEtherBalances(addresses);
+  return getEtherBalancesScanner(provider, addresses);
 };
 
 /**
@@ -28,7 +29,5 @@ export const getTokenBalances = async (
   tokenAddress: string,
   addresses: string[]
 ): Promise<Record<string, BigNumber>> => {
-  const scanner = new EthScan(new EthersProvider(provider));
-
-  return scanner.getTokenBalances(addresses, tokenAddress);
+  return getTokenBalancesScanner(provider, addresses, tokenAddress);
 };

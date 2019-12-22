@@ -1,25 +1,21 @@
+import { BigNumber } from '@ethersproject/bignumber';
+import { Provider } from '@ethersproject/providers';
 import { BalanceMap } from '@mycrypto/eth-scan';
-import BigNumber from 'bignumber.js';
 
-export class EthersProvider {}
+export const getEtherBalances = async (_: Provider, addresses: string[]): Promise<BalanceMap> => {
+  return addresses.reduce<BalanceMap>((object, address) => {
+    return {
+      ...object,
+      [address]: BigNumber.from(1)
+    };
+  }, {});
+};
 
-// tslint:disable-next-line: max-classes-per-file
-export default class EthScan {
-  async getEtherBalances(addresses: string[]): Promise<BalanceMap> {
-    return addresses.reduce<BalanceMap>((object, address) => {
-      return {
-        ...object,
-        [address]: new BigNumber(1)
-      };
-    }, {});
-  }
-
-  async getTokenBalances(addresses: string[]): Promise<BalanceMap> {
-    return addresses.reduce<BalanceMap>((object, address) => {
-      return {
-        ...object,
-        [address]: new BigNumber(1)
-      };
-    }, {});
-  }
-}
+export const getTokenBalances = async (_: Provider, addresses: string[]): Promise<BalanceMap> => {
+  return addresses.reduce<BalanceMap>((object, address) => {
+    return {
+      ...object,
+      [address]: BigNumber.from(1)
+    };
+  }, {});
+};

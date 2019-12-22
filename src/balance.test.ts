@@ -4,10 +4,6 @@ import { getEtherBalances, getTokenBalances } from './balance';
 jest.mock('@ethersproject/providers');
 jest.mock('@mycrypto/eth-scan');
 
-afterAll(() => {
-  jest.clearAllMocks();
-});
-
 describe('getEtherBalances', () => {
   it('gets the Ether balance for multiple addresses', async () => {
     const provider = new JsonRpcProvider('https://ethereum-node');
