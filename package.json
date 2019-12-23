@@ -1,9 +1,23 @@
 {
   "name": "@findeth/networks",
   "version": "0.1.0",
-  "description": "Library used by FindETH, which provides network functionality",
-  "repository": "https://github.com/FindETH/networks.git",
+  "description": "Network functionality used by FindETH",
   "author": "Maarten Zuidhoorn <maarten@zuidhoorn.com>",
+  "homepage": "https://github.com/FindETH/networks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FindETH/networks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FindETH/networks/issues",
+    "email": "info@findeth.io"
+  },
+  "keywords": [
+    "ethereum",
+    "networks",
+    "web3",
+    "findeth"
+  ],
   "license": "MIT",
   "main": "lib/cjs/index.js",
   "module": "lib/es/index.js",
@@ -78,5 +92,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
