@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`objectToNativeBigInt maps an object with BigNumbers to an object with bigints 1`] = `
+Object {
+  "bar": 0n,
+  "baz": -10n,
+  "foo": 10n,
+}
+`;

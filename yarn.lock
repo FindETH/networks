@@ -177,6 +177,11 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0.tgz#bbb3fbee98661c569034237cc03967ba99b4f250"
   integrity sha512-CYAOUCARwExnEixLdB6sDm2dIJ/YgEAKDM1MOeMeZu9Ld/bDgVo8aiWrXwcY7OBh+1Ea2uUcVRcxKk0GJvW7QA==
 
+"@babel/helper-plugin-utils@^7.8.0":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.8.3.tgz#9ea293be19babc0f52ff8ca88b34c3611b208670"
+  integrity sha512-j+fq49Xds2smCUNYmEHF9kGNkhbet6yVIBp4e6oeQpH1RUs/Ir06xUKzDjDkGcaaokPiTNs2JBWHjaE4csUkZQ==
+
 "@babel/helper-regex@^7.0.0", "@babel/helper-regex@^7.4.4":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/helper-regex/-/helper-regex-7.5.5.tgz#0aa6824f7100a2e0e89c1527c23936c152cab351"
@@ -324,6 +329,13 @@
   integrity sha512-Li4+EjSpBgxcsmeEF8IFcfV/+yJGxHXDirDkEoyFjumuwbmfCVHUt0HuowD/iGM7OhIRyXJH9YXxqiH6N815+g==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
+
+"@babel/plugin-syntax-bigint@^7.8.3":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-bigint/-/plugin-syntax-bigint-7.8.3.tgz#4c9a6f669f5d0cdf1b90a1671e9a146be5300cea"
+  integrity sha512-wnTnFlG+YxQm3vDxpGE57Pj0srRU4sHE/mDkt1qv2YJJSeUAec2ma4WLUnUPeKjyrfntVwe/N6dCXpU+zL3Npg==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.8.0"
 
 "@babel/plugin-syntax-dynamic-import@^7.7.4":
   version "7.7.4"
@@ -740,10 +752,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@ethersproject/abi@^5.0.0-beta.142":
-  version "5.0.0-beta.142"
-  resolved "https://registry.yarnpkg.com/@ethersproject/abi/-/abi-5.0.0-beta.142.tgz#cde0ced7daa2fbc98e35a2c31203331907e84a39"
-  integrity sha512-vJ2V9fPNzi+8iutY4sjy6mgogkJtiGsd9hmpa1bjnGW6qnHOEkAV1fzVpvT002LlnjFgqgtzuLBDZob6oU7i8w==
+"@ethersproject/abi@^5.0.0-beta.146":
+  version "5.0.0-beta.146"
+  resolved "https://registry.yarnpkg.com/@ethersproject/abi/-/abi-5.0.0-beta.146.tgz#c843b90716c37630404e647313119e7e01838163"
+  integrity sha512-9wn60tZ0rLGTlHnrD2V58i+bo+UvWytSCuI506ytqfwYauPI9gSkd3IPQI8Li61J1albZa4qtM37W5QlP0B7Eg==
   dependencies:
     "@ethersproject/address" ">=5.0.0-beta.128"
     "@ethersproject/bignumber" ">=5.0.0-beta.130"
@@ -1088,12 +1100,12 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@mycrypto/eth-scan@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@mycrypto/eth-scan/-/eth-scan-2.0.1.tgz#65b120ba11b93e8e9d65c437a6cf15d2a67bb5b0"
-  integrity sha512-/GyVFl9cf8tFAlKcmaBWk+LVfne6iAiWPMuHOJdY++XYcQ32CSmn6VSMu3sVEl408mZo6I+xveyGu2M55+kalg==
+"@mycrypto/eth-scan@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@mycrypto/eth-scan/-/eth-scan-2.1.0.tgz#9248b00000bff0b4ac9acda093d98eae0c84b93c"
+  integrity sha512-ncbWZDz6lL/8iFklGYt5MG2iTtTzJ6V6P10ht6PoOMHFG/2HiAm9AbKzwP0twYRh/oa/p/nSg3SrZer0Zuk7ZA==
   dependencies:
-    "@ethersproject/abi" "^5.0.0-beta.142"
+    "@ethersproject/abi" "^5.0.0-beta.146"
     "@ethersproject/bignumber" "^5.0.0-beta.135"
     isomorphic-unfetch "^3.0.0"
 
