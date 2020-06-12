@@ -18,7 +18,7 @@ export const hasWindow = (): boolean => {
 /**
  * Get an instance of the injected Web3 provider if it exists.
  *
- * @return {Web3Provider}
+ * @return [ExternalProvider]
  */
 export const getWeb3 = (): ExternalProvider | undefined => {
   if (hasWindow()) {
