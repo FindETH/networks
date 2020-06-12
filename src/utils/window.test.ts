@@ -1,4 +1,4 @@
-import { AsyncSendable } from '@ethersproject/providers';
+import { ExternalProvider } from '@ethersproject/providers';
 import { getWeb3, hasWindow } from './window';
 
 describe('hasWindow', () => {
@@ -9,8 +9,8 @@ describe('hasWindow', () => {
 
 describe('getWeb3', () => {
   it('returns the injected Web3 if it exists', () => {
-    const currentProvider = jest.fn() as AsyncSendable;
-    (window as { web3?: { currentProvider: AsyncSendable } }).web3 = {
+    const currentProvider = jest.fn() as ExternalProvider;
+    (window as { web3?: { currentProvider: ExternalProvider } }).web3 = {
       currentProvider
     };
 
