@@ -1,8 +1,8 @@
-import { AsyncSendable } from '@ethersproject/providers';
+import { ExternalProvider } from '@ethersproject/providers';
 
 interface CustomWindow {
   web3?: {
-    currentProvider?: AsyncSendable;
+    currentProvider?: ExternalProvider;
   };
 }
 
@@ -18,9 +18,9 @@ export const hasWindow = (): boolean => {
 /**
  * Get an instance of the injected Web3 provider if it exists.
  *
- * @return {AsyncSendable}
+ * @return {Web3Provider}
  */
-export const getWeb3 = (): AsyncSendable | undefined => {
+export const getWeb3 = (): ExternalProvider | undefined => {
   if (hasWindow()) {
     return (window as CustomWindow)?.web3?.currentProvider;
   }

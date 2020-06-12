@@ -1,4 +1,4 @@
-import { AsyncSendable, FallbackProvider, JsonRpcProvider, Web3Provider } from '@ethersproject/providers';
+import { ExternalProvider, FallbackProvider, JsonRpcProvider, Web3Provider } from '@ethersproject/providers';
 import { getDefaultProvider, getNetwork, NETWORK_MAINNET, NETWORK_TESTNET, NETWORK_UNKNOWN } from './network';
 
 jest.mock('@ethersproject/providers');
@@ -9,8 +9,8 @@ describe('getDefaultProvider', () => {
   });
 
   it('uses an injected Web3 provider if it exists', () => {
-    (window as { web3?: { currentProvider: AsyncSendable } }).web3 = {
-      currentProvider: {} as AsyncSendable
+    (window as { web3?: { currentProvider: ExternalProvider } }).web3 = {
+      currentProvider: {} as ExternalProvider
     };
 
     expect(getDefaultProvider()).toBeInstanceOf(Web3Provider);

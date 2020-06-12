@@ -62,7 +62,7 @@
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-typescript": "^7.7.4",
-    "@ethersproject/providers": "^5.0.0-beta.146",
+    "@ethersproject/providers": "^5.0.0-beta.171",
     "@types/jest": "^24.0.23",
     "babel-jest": "^24.9.0",
     "codecov": "^3.6.1",
