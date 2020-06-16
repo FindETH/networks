@@ -2,34 +2,16 @@
 
 exports[`getEtherBalances gets the Ether balance for multiple addresses 1`] = `
 Object {
-  "0x0000000000000000000000000000000000000000": BigNumber {
-    "_hex": "0x01",
-    "_isBigNumber": true,
-  },
-  "0x0000000000000000000000000000000000000001": BigNumber {
-    "_hex": "0x01",
-    "_isBigNumber": true,
-  },
-  "0x0000000000000000000000000000000000000002": BigNumber {
-    "_hex": "0x01",
-    "_isBigNumber": true,
-  },
+  "0x0000000000000000000000000000000000000000": 1n,
+  "0x0000000000000000000000000000000000000001": 1n,
+  "0x0000000000000000000000000000000000000002": 1n,
 }
 `;
 
 exports[`getTokenBalances gets the token balance for multiple addresses 1`] = `
 Object {
-  "0x0000000000000000000000000000000000000000": BigNumber {
-    "_hex": "0x01",
-    "_isBigNumber": true,
-  },
-  "0x0000000000000000000000000000000000000001": BigNumber {
-    "_hex": "0x01",
-    "_isBigNumber": true,
-  },
-  "0x0000000000000000000000000000000000000002": BigNumber {
-    "_hex": "0x01",
-    "_isBigNumber": true,
-  },
+  "0x0000000000000000000000000000000000000000": 1n,
+  "0x0000000000000000000000000000000000000001": 1n,
+  "0x0000000000000000000000000000000000000002": 1n,
 }
 `;

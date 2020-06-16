@@ -1,4 +1,3 @@
-import { BigNumber } from '@ethersproject/bignumber';
 import { Provider } from '@ethersproject/providers';
 import { BalanceMap } from '@mycrypto/eth-scan';
 
@@ -6,7 +5,7 @@ export const getEtherBalances = async (_: Provider, addresses: string[]): Promis
   return addresses.reduce<BalanceMap>((object, address) => {
     return {
       ...object,
-      [address]: BigNumber.from(1)
+      [address]: 1n
     };
   }, {});
 };
@@ -15,7 +14,7 @@ export const getTokenBalances = async (_: Provider, addresses: string[]): Promis
   return addresses.reduce<BalanceMap>((object, address) => {
     return {
       ...object,
-      [address]: BigNumber.from(1)
+      [address]: 1n
     };
   }, {});
 };
