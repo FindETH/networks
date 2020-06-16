@@ -49,7 +49,7 @@
     "prepare": "yarn run build"
   },
   "dependencies": {
-    "@mycrypto/eth-scan": "https://github.com/FindETH/eth-scan"
+    "@mycrypto/eth-scan": "^3.0.0"
   },
   "peerDependencies": {
     "@ethersproject/providers": "^5.0.0-beta.146"

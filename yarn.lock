@@ -1185,9 +1185,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@mycrypto/eth-scan@https://github.com/FindETH/eth-scan":
-  version "2.1.0"
-  resolved "https://github.com/FindETH/eth-scan#47c39010ae18506dc015f2c2a47c35512f7b4953"
+"@mycrypto/eth-scan@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@mycrypto/eth-scan/-/eth-scan-3.0.0.tgz#13517e0fe23d3a5a7bdd7be6be91bfa76f9d99e0"
+  integrity sha512-a1Q/lAY/Q1105fIQzXTnvH/EPkd+HlM9/CT4F+X3Kt/UvwPZM1B0P8Yj/k5szIHJNbMed/JtKsMrtpTgW8Tesg==
   dependencies:
     "@findeth/abi" "^0.2.1"
     isomorphic-unfetch "^3.0.0"
