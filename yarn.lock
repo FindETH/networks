@@ -844,21 +844,6 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@ethersproject/abi@^5.0.0-beta.146":
-  version "5.0.0-beta.156"
-  resolved "https://registry.yarnpkg.com/@ethersproject/abi/-/abi-5.0.0-beta.156.tgz#7df7fe5ce82d583e8abdae28b8eee9b1aee5fb26"
-  integrity sha512-k5RdPfSaT0IStB0qNWFOP4Xs9Zqhj8t+BPHWuIAl9Rlc7fuQINbaUPZFzliGPM5y+ge4aLIjq0AlJvlwK8c/Ew==
-  dependencies:
-    "@ethersproject/address" ">=5.0.0-beta.134"
-    "@ethersproject/bignumber" ">=5.0.0-beta.138"
-    "@ethersproject/bytes" ">=5.0.0-beta.137"
-    "@ethersproject/constants" ">=5.0.0-beta.133"
-    "@ethersproject/hash" ">=5.0.0-beta.133"
-    "@ethersproject/keccak256" ">=5.0.0-beta.131"
-    "@ethersproject/logger" ">=5.0.0-beta.137"
-    "@ethersproject/properties" ">=5.0.0-beta.140"
-    "@ethersproject/strings" ">=5.0.0-beta.136"
-
 "@ethersproject/abstract-provider@>=5.0.0-beta.139":
   version "5.0.0-beta.142"
   resolved "https://registry.yarnpkg.com/@ethersproject/abstract-provider/-/abstract-provider-5.0.0-beta.142.tgz#932986a2fc7f392d406f888a46d9fc6f4b234cb4"
@@ -902,7 +887,7 @@
   dependencies:
     "@ethersproject/bytes" ">=5.0.0-beta.137"
 
-"@ethersproject/bignumber@>=5.0.0-beta.138", "@ethersproject/bignumber@^5.0.0-beta.135":
+"@ethersproject/bignumber@>=5.0.0-beta.138":
   version "5.0.0-beta.139"
   resolved "https://registry.yarnpkg.com/@ethersproject/bignumber/-/bignumber-5.0.0-beta.139.tgz#12a4fa5a76ee90f77932326311caf04e1de1cae0"
   integrity sha512-h1C1okCmPK3UVWwMGUbuCZykplJmD/TdknPQQHJWL/chK5MqBhyQ5o1Cay7mHXKCBnjWrR9BtwjfkAh76pYtFA==
@@ -1044,6 +1029,13 @@
     "@ethersproject/logger" ">=5.0.0-beta.137"
     "@ethersproject/properties" ">=5.0.0-beta.140"
     "@ethersproject/strings" ">=5.0.0-beta.136"
+
+"@findeth/abi@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@findeth/abi/-/abi-0.2.1.tgz#ad03929365cf8f42e8c8aa881eec927b3fe9f151"
+  integrity sha512-IEmhZZkqTvqonyyHwe+USXzlITmdlozkjk1qWdGOrDK/iNby2/SCgacc5HY4KP+soAB6aRcaLRhnmauhq+hRXw==
+  dependencies:
+    keccak "^3.0.0"
 
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
@@ -1193,13 +1185,11 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@mycrypto/eth-scan@^2.1.0":
+"@mycrypto/eth-scan@https://github.com/FindETH/eth-scan":
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@mycrypto/eth-scan/-/eth-scan-2.1.0.tgz#9248b00000bff0b4ac9acda093d98eae0c84b93c"
-  integrity sha512-ncbWZDz6lL/8iFklGYt5MG2iTtTzJ6V6P10ht6PoOMHFG/2HiAm9AbKzwP0twYRh/oa/p/nSg3SrZer0Zuk7ZA==
+  resolved "https://github.com/FindETH/eth-scan#47c39010ae18506dc015f2c2a47c35512f7b4953"
   dependencies:
-    "@ethersproject/abi" "^5.0.0-beta.146"
-    "@ethersproject/bignumber" "^5.0.0-beta.135"
+    "@findeth/abi" "^0.2.1"
     isomorphic-unfetch "^3.0.0"
 
 "@nodelib/fs.scandir@2.1.3":
@@ -3686,6 +3676,14 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+keccak@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/keccak/-/keccak-3.0.0.tgz#420d1de4a38a04f33ff8401f0535fb93756861d4"
+  integrity sha512-/4h4FIfFEpTEuySXi/nVFM5rqSKPnnhI7cL4K3MFSwoI3VyM7AhPSq3SsysARtnEBEeIKMBUWD8cTh9nHE8AkA==
+  dependencies:
+    node-addon-api "^2.0.0"
+    node-gyp-build "^4.2.0"
+
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
@@ -4090,10 +4088,20 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
+node-addon-api@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-2.0.1.tgz#4fd0931bf6d7e48b219ff3e6abc73cbb0252b7a3"
+  integrity sha512-2WVfwRfIr1AVn3dRq4yRc2Hn35ND+mPJH6inC6bjpYCZVrpXPB4j3T6i//OGVfqVsR1t/X/axRulDsheq4F0LQ==
+
 node-fetch@^2.2.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+
+node-gyp-build@^4.2.0:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.2.2.tgz#3f44b65adaafd42fb6c3d81afd630e45c847eb66"
+  integrity sha512-Lqh7mrByWCM8Cf9UPqpeoVBBo5Ugx+RKu885GAzmLBVYjeywScxHXPGLa4JfYNZmcNGwzR0Glu5/9GaQZMFqyA==
 
 node-int64@^0.4.0:
   version "0.4.0"

@@ -3,7 +3,6 @@ import {
   getEtherBalances as getEtherBalancesScanner,
   getTokenBalances as getTokenBalancesScanner
 } from '@mycrypto/eth-scan';
-import { objectToNativeBigInt } from './utils/bigint';
 
 /**
  * Get Ether balances for multiple addresses.
@@ -13,7 +12,7 @@ import { objectToNativeBigInt } from './utils/bigint';
  * @return {Promise<Record<string, BigNumber>>}
  */
 export const getEtherBalances = (provider: Provider, addresses: string[]): Promise<Record<string, bigint>> => {
-  return getEtherBalancesScanner(provider, addresses).then(objectToNativeBigInt);
+  return getEtherBalancesScanner(provider, addresses);
 };
 
 /**
@@ -29,5 +28,5 @@ export const getTokenBalances = async (
   tokenAddress: string,
   addresses: string[]
 ): Promise<Record<string, bigint>> => {
-  return getTokenBalancesScanner(provider, addresses, tokenAddress).then(objectToNativeBigInt);
+  return getTokenBalancesScanner(provider, addresses, tokenAddress);
 };
