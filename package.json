@@ -82,7 +82,8 @@
     "typescript": "^3.7.3"
   },
   "resolutions": {
-    "ethereumjs-abi": "0.6.7"
+    "ethereumjs-abi": "0.6.7",
+    "scrypt": "https://github.com/barrysteyn/node-scrypt.git#fb60a8d3"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
