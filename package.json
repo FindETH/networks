@@ -46,6 +46,7 @@
     "lint:prettier": "prettier --check 'src/**/*.{ts,tsx}'",
     "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn github.com --validate-https --validate-checksum --validate-integrity",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
+    "fetch-networks": "ts-node --project tsconfig.scripts.json scripts/fetch-networks",
     "prepare": "yarn run build"
   },
   "dependencies": {
