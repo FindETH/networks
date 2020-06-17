@@ -1,54 +1,54 @@
-import { INFURA_PROJECT_ID } from './constants';
+import networks from '../networks.json';
 import { getVersion } from './jsonrpc';
 
 export interface Network {
-  name: 'Mainnet' | 'Testnet' | 'Unknown' | 'Offline';
-  color: string;
+  name: string;
+  chain: string;
+  network: string;
+  rpc: string[];
+  faucets: string[];
+  nativeCurrency: {
+    name: string;
+    symbol: string;
+    decimals: number;
+  };
+  infoURL: string;
+  shortName: string;
+  chainId: number;
+  networkId: number;
+  slip44?: number;
+  ens?: {
+    registry: string;
+  };
 }
 
-export const NETWORK_MAINNET: Network = {
-  name: 'Mainnet',
-  color: '#007896'
-};
-
-export const NETWORK_TESTNET: Network = {
-  name: 'Testnet',
-  color: '#adc101'
-};
-
-export const NETWORK_UNKNOWN: Network = {
-  name: 'Unknown',
-  color: '#b37aff'
-};
-
-export const NETWORK_OFFLINE: Network = {
-  name: 'Offline',
-  color: '#dcdcdc'
-};
-
-export const getDefaultProvider = (): string => {
-  return `https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}`;
+/**
+ * Get the default network.
+ *
+ * @return {Network}
+ */
+export const getDefaultNetwork = (): Network => {
+  return networks[0];
 };
 
 /**
- * Get the current (Ethereum) network.
+ * Get all supported networks.
+ *
+ * @return {Network[]}
+ */
+export const getSupportedNetworks = (): Network[] => {
+  return networks;
+};
+
+/**
+ * Get the current network for a provider.
  *
  * @param {string} provider
- * @return {Promise<Network>}
+ * @return {Promise<Network | undefined>}
  */
-export const getNetwork = async (provider: string): Promise<Network> => {
+export const getNetwork = async (provider: string): Promise<Network | undefined> => {
+  const supportedNetworks = getSupportedNetworks();
   const networkId = await getVersion(provider);
 
-  switch (networkId) {
-    case 1:
-      return NETWORK_MAINNET;
-    case 3: // Ropsten
-    case 4: // Rinkeby
-    case 5: // Goerli
-    case 6: // Kotti Classic
-    case 42: // Kovan
-      return NETWORK_TESTNET;
-    default:
-      return NETWORK_UNKNOWN;
-  }
+  return supportedNetworks.find(item => item.networkId === networkId);
 };

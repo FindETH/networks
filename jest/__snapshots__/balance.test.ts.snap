@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getEtherBalances gets the Ether balance for multiple addresses 1`] = `
+exports[`getEtherBalances gets the Ether balance for multiple addresses for eth-scan supported networks 1`] = `
 Object {
   "0x0000000000000000000000000000000000000000": 1n,
   "0x0000000000000000000000000000000000000001": 1n,
@@ -8,7 +8,23 @@ Object {
 }
 `;
 
-exports[`getTokenBalances gets the token balance for multiple addresses 1`] = `
+exports[`getEtherBalances gets the Ether balance for multiple addresses for non-eth-scan supported networks 1`] = `
+Object {
+  "0x0000000000000000000000000000000000000000": 1n,
+  "0x0000000000000000000000000000000000000001": 1n,
+  "0x0000000000000000000000000000000000000002": 1n,
+}
+`;
+
+exports[`getTokenBalances gets the token balance for multiple addresses for eth-scan supported networks 1`] = `
+Object {
+  "0x0000000000000000000000000000000000000000": 1n,
+  "0x0000000000000000000000000000000000000001": 1n,
+  "0x0000000000000000000000000000000000000002": 1n,
+}
+`;
+
+exports[`getTokenBalances gets the token balance for multiple addresses for non-eth-scan supported networks 1`] = `
 Object {
   "0x0000000000000000000000000000000000000000": 1n,
   "0x0000000000000000000000000000000000000001": 1n,

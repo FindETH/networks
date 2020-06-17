@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-unfetch';
-import { EthCall, EthChainId, JsonrpcMethod, NetVersion, Request, Response } from './types';
+import { EthCall, EthChainId, EthGetBalance, JsonrpcMethod, NetVersion, Request, Response } from './types';
 
 export const getRequestData = <T extends JsonrpcMethod>(method: T['method'], params: T['params']): Request<T> => {
   return {
@@ -35,11 +35,11 @@ export const sendRequest = async <T extends JsonrpcMethod>(url: string, data: Re
  *
  * @param {string} url
  * @param {EthCall['params']} params
- * @return {Buffer}
+ * @return {string}
  */
-export const call = async (url: string, params: EthCall['params']): Promise<Buffer> => {
+export const call = async (url: string, params: EthCall['params']): Promise<string> => {
   const { result } = await sendRequest(url, getRequestData<EthCall>('eth_call', params));
-  return Buffer.from(result, 'hex');
+  return result;
 };
 
 /**
@@ -51,6 +51,21 @@ export const call = async (url: string, params: EthCall['params']): Promise<Buff
 export const getChainId = async (url: string): Promise<number> => {
   const { result } = await sendRequest(url, getRequestData<EthChainId>('eth_chainId', []));
   return Number(result);
+};
+
+/**
+ * Returns the balance for an address as bigint.
+ *
+ * @param {string} url
+ * @param {string} address
+ * @return {Promise<bigint>}
+ */
+export const getBalance = async (url: string, address: string): Promise<bigint> => {
+  const { result } = await sendRequest(
+    url,
+    getRequestData<EthGetBalance>('eth_getBalance', [address, 'latest'])
+  );
+  return BigInt(result);
 };
 
 /**
