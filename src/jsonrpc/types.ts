@@ -22,13 +22,19 @@ export interface EthChainId {
   result: string;
 }
 
+export interface EthGetBalance {
+  method: 'eth_getBalance';
+  params: [string, Tag];
+  result: string;
+}
+
 export interface NetVersion {
   method: 'net_version';
   params: [];
   result: string;
 }
 
-export type JsonrpcMethod = EthCall | EthChainId | NetVersion;
+export type JsonrpcMethod = EthCall | EthChainId | EthGetBalance | NetVersion;
 
 export interface Request<T extends JsonrpcMethod> {
   id: string;

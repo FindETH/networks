@@ -4,7 +4,7 @@
     "chain": "ETH",
     "network": "mainnet",
     "rpc": [
-      "https://mainnet.infura.io/v3/${INFURA_API_KEY}",
+      "https://mainnet.infura.io/v3/bfea47cc97c440a687c8762553739a94",
       "https://api.mycryptoapi.com/eth"
     ],
     "faucets": [],
@@ -551,7 +551,7 @@
     "chain": "ETH",
     "network": "ropsten",
     "rpc": [
-      "https://ropsten.infura.io/v3/${INFURA_API_KEY}"
+      "https://ropsten.infura.io/v3/bfea47cc97c440a687c8762553739a94"
     ],
     "faucets": [
       "https://faucet.ropsten.be?${ADDRESS}"
@@ -689,7 +689,7 @@
     "chain": "ETH",
     "network": "rinkeby",
     "rpc": [
-      "https://rinkeby.infura.io/v3/${INFURA_API_KEY}"
+      "https://rinkeby.infura.io/v3/bfea47cc97c440a687c8762553739a94"
     ],
     "faucets": [
       "https://faucet.rinkeby.io"
@@ -712,7 +712,7 @@
     "chain": "ETH",
     "network": "kovan",
     "rpc": [
-      "https://kovan.infura.io/v3/${INFURA_API_KEY}"
+      "https://kovan.infura.io/v3/bfea47cc97c440a687c8762553739a94"
     ],
     "faucets": [
       "https://faucet.kovan.network",

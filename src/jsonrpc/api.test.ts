@@ -3,7 +3,7 @@
  */
 
 import Ganache from 'ganache-core';
-import { call, getChainId, getRequestData, getVersion } from './api';
+import { call, getBalance, getChainId, getRequestData, getVersion } from './api';
 
 const HTTP_ENDPOINT = 'http://localhost:8545';
 let server: {
@@ -12,7 +12,21 @@ let server: {
 };
 
 beforeAll(done => {
-  server = Ganache.server({ network_id: 1 });
+  server = Ganache.server({
+    network_id: 1,
+    accounts: [
+      {
+        // 0x50011201cc8a14735ec82bc8a7d0f3122113761d
+        secretKey: '0x2b8bf9b6d21098359310b1b3e07ed44a7d198908868d70421173464a7a97d503',
+        balance: '0x3039'
+      },
+      {
+        // 0x3f5545a1174e0e20ac3a44e1465a7532e38e3e43
+        secretKey: '0x351fe7a3ebc78d85826cb41cf3d8ddfe6545ec0edac5158f2e6d8a16b076cce3',
+        balance: '0xd431'
+      }
+    ]
+  });
   server.listen(8545, done);
 });
 
@@ -54,7 +68,14 @@ describe('call', () => {
         },
         'latest'
       ])
-    ).resolves.toStrictEqual(Buffer.alloc(0));
+    ).resolves.toStrictEqual('0x');
+  });
+});
+
+describe('getBalance', () => {
+  it('returns the balance for an address', async () => {
+    await expect(getBalance(HTTP_ENDPOINT, '0x50011201cc8a14735ec82bc8a7d0f3122113761d')).resolves.toBe(12345n);
+    await expect(getBalance(HTTP_ENDPOINT, '0x3f5545a1174e0e20ac3a44e1465a7532e38e3e43')).resolves.toBe(54321n);
   });
 });
 

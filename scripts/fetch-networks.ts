@@ -1,6 +1,7 @@
 import { exec as nodeExec } from 'child_process';
 import { promises as fs } from 'fs';
 import { join } from 'path';
+import { INFURA_PROJECT_ID } from '../src/constants';
 
 const REPOSITORY_URL = 'https://github.com/ethereum-lists/chains.git';
 const REPOSITORY_PATH = join(__dirname, '../.cache/ethereum-lists/chains');
@@ -47,7 +48,14 @@ const run = async () => {
     })
   );
 
-  const networks = jsonObjects.filter(network => network.rpc.length > 0);
+  const networks = jsonObjects
+    .filter(network => network.rpc.length > 0)
+    .map(network => {
+      return {
+        ...network,
+        rpc: [...network.rpc.map((url: string) => url.replace('${INFURA_API_KEY}', INFURA_PROJECT_ID))]
+      };
+    });
 
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(networks, null, 2), 'utf8');
 };
