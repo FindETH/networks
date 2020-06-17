@@ -44,7 +44,7 @@
     "lint:tsc": "tsc --noEmit",
     "lint:tslint": "tslint --project .",
     "lint:prettier": "prettier --check 'src/**/*.{ts,tsx}'",
-    "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn --validate-https --validate-checksum --validate-integrity",
+    "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn github.com --validate-https --validate-checksum --validate-integrity",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
     "prepare": "yarn run build"
   },
