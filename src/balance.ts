@@ -1,4 +1,3 @@
-import { Provider } from '@ethersproject/providers';
 import {
   getEtherBalances as getEtherBalancesScanner,
   getTokenBalances as getTokenBalancesScanner
@@ -7,24 +6,24 @@ import {
 /**
  * Get Ether balances for multiple addresses.
  *
- * @param {Provider} provider
+ * @param {string} provider
  * @param {string[]} addresses
- * @return {Promise<Record<string, BigNumber>>}
+ * @return {Promise<Record<string, bigint>>}
  */
-export const getEtherBalances = (provider: Provider, addresses: string[]): Promise<Record<string, bigint>> => {
+export const getEtherBalances = (provider: string, addresses: string[]): Promise<Record<string, bigint>> => {
   return getEtherBalancesScanner(provider, addresses);
 };
 
 /**
  * Get token balances for multiple addresses, for a single token contract.
  *
- * @param {Provider} provider
+ * @param {string} provider
  * @param {string} tokenAddress
  * @param {string[]} addresses
- * @return {Promise<Record<string, BigNumber>>}
+ * @return {Promise<Record<string, bigint>>}
  */
 export const getTokenBalances = async (
-  provider: Provider,
+  provider: string,
   tokenAddress: string,
   addresses: string[]
 ): Promise<Record<string, bigint>> => {

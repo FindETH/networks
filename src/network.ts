@@ -1,13 +1,5 @@
-import {
-  EtherscanProvider,
-  FallbackProvider,
-  InfuraProvider,
-  JsonRpcProvider,
-  Provider,
-  Web3Provider
-} from '@ethersproject/providers';
-import { INFURA_PROJECT_ID, MYCRYPTO_JSONRPC_ENDPOINT } from './constants';
-import { getWeb3 } from './utils/window';
+import { INFURA_PROJECT_ID } from './constants';
+import { getVersion } from './jsonrpc';
 
 export interface Network {
   name: 'Mainnet' | 'Testnet' | 'Unknown' | 'Offline';
@@ -34,36 +26,20 @@ export const NETWORK_OFFLINE: Network = {
   color: '#dcdcdc'
 };
 
-/**
- * Get the default provider, which primarily uses MyCrypto's public API endpoint, and has fallbacks to Infura and
- * Etherscan. If an injected Web3 provider is detected (e.g. MetaMask), that will be used instead.
- *
- * @param {number} [networkId=1]
- * @return {Provider}
- */
-export const getDefaultProvider = (networkId: number = 1): Provider => {
-  const web3 = getWeb3();
-  if (web3) {
-    return new Web3Provider(web3);
-  }
-
-  return new FallbackProvider([
-    new JsonRpcProvider(MYCRYPTO_JSONRPC_ENDPOINT, networkId),
-    new InfuraProvider(networkId, INFURA_PROJECT_ID),
-    new EtherscanProvider(networkId)
-  ]);
+export const getDefaultProvider = (): string => {
+  return `https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}`;
 };
 
 /**
- * Get the current network.
+ * Get the current (Ethereum) network.
  *
- * @param {Provider} provider
+ * @param {string} provider
  * @return {Promise<Network>}
  */
-export const getNetwork = async (provider: Provider): Promise<Network> => {
-  const { chainId } = await provider.getNetwork();
+export const getNetwork = async (provider: string): Promise<Network> => {
+  const networkId = await getVersion(provider);
 
-  switch (chainId) {
+  switch (networkId) {
     case 1:
       return NETWORK_MAINNET;
     case 3: // Ropsten
