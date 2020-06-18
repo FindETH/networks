@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Network | @findeth/networks - v0.2.2</title>
+	<title>EthCall | @findeth/networks - v0.3.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@findeth/networks - v0.2.2</a>
+					<a href="../index.html" class="title">@findeth/networks - v0.3.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_network_.html">&quot;network&quot;</a>
+					<a href="../modules/_src_jsonrpc_types_.html">&quot;src/jsonrpc/types&quot;</a>
 				</li>
 				<li>
-					<a href="_network_.network.html">Network</a>
+					<a href="_src_jsonrpc_types_.ethcall.html">EthCall</a>
 				</li>
 			</ul>
-			<h1>Interface Network</h1>
+			<h1>Interface EthCall</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Network</span>
+						<span class="target">EthCall</span>
 					</li>
 				</ul>
 			</section>
@@ -84,8 +84,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_network_.network.html#color" class="tsd-kind-icon">color</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_network_.network.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_src_jsonrpc_types_.ethcall.html#method" class="tsd-kind-icon">method</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_src_jsonrpc_types_.ethcall.html#params" class="tsd-kind-icon">params</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_src_jsonrpc_types_.ethcall.html#result" class="tsd-kind-icon">result</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,22 +95,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="color" class="tsd-anchor"></a>
-					<h3>color</h3>
-					<div class="tsd-signature tsd-kind-icon">color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="method" class="tsd-anchor"></a>
+					<h3>method</h3>
+					<div class="tsd-signature tsd-kind-icon">method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"eth_call"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/networks/blob/b4c86eb/src/network.ts#L14">network.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/networks/blob/f1e28cf/src/jsonrpc/types.ts#L4">src/jsonrpc/types.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"Mainnet"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Testnet"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Unknown"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Offline"</span></div>
+					<a name="params" class="tsd-anchor"></a>
+					<h3>params</h3>
+					<div class="tsd-signature tsd-kind-icon">params<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">, </span><a href="../modules/_src_jsonrpc_types_.html#tag" class="tsd-signature-type">Tag</a><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/networks/blob/b4c86eb/src/network.ts#L13">network.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/networks/blob/f1e28cf/src/jsonrpc/types.ts#L5">src/jsonrpc/types.ts:5</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="result" class="tsd-anchor"></a>
+					<h3>result</h3>
+					<div class="tsd-signature tsd-kind-icon">result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/FindETH/networks/blob/f1e28cf/src/jsonrpc/types.ts#L16">src/jsonrpc/types.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -121,20 +132,35 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_balance_.html">&quot;balance&quot;</a>
+					<li class="label tsd-is-external">
+						<span>Internals</span>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_constants_.html">&quot;constants&quot;</a>
+						<a href="../modules/_src_balance_.html">&quot;src/balance&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">&quot;index&quot;</a>
+						<a href="../modules/_src_constants_.html">&quot;src/constants&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_src_index_.html">&quot;src/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_src_jsonrpc_api_.html">&quot;src/jsonrpc/api&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_src_jsonrpc_index_.html">&quot;src/jsonrpc/index&quot;</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_network_.html">&quot;network&quot;</a>
+						<a href="../modules/_src_jsonrpc_types_.html">&quot;src/jsonrpc/types&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utils_window_.html">&quot;utils/window&quot;</a>
+						<a href="../modules/_src_network_.html">&quot;src/network&quot;</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/_networks_.html">&quot;networks&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -143,35 +169,41 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_network_.network.html" class="tsd-kind-icon">Network</a>
+						<a href="_src_jsonrpc_types_.ethcall.html" class="tsd-kind-icon">Eth<wbr>Call</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_network_.network.html#color" class="tsd-kind-icon">color</a>
+								<a href="_src_jsonrpc_types_.ethcall.html#method" class="tsd-kind-icon">method</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_network_.network.html#name" class="tsd-kind-icon">name</a>
+								<a href="_src_jsonrpc_types_.ethcall.html#params" class="tsd-kind-icon">params</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_src_jsonrpc_types_.ethcall.html#result" class="tsd-kind-icon">result</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_network_.html#getdefaultprovider" class="tsd-kind-icon">get<wbr>Default<wbr>Provider</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_src_jsonrpc_types_.ethchainid.html" class="tsd-kind-icon">Eth<wbr>Chain<wbr>Id</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_network_.html#getnetwork" class="tsd-kind-icon">get<wbr>Network</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_src_jsonrpc_types_.ethgetbalance.html" class="tsd-kind-icon">Eth<wbr>Get<wbr>Balance</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
-						<a href="../modules/_network_.html#network_mainnet" class="tsd-kind-icon">NETWORK_<wbr>MAINNET</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_src_jsonrpc_types_.netversion.html" class="tsd-kind-icon">Net<wbr>Version</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
-						<a href="../modules/_network_.html#network_offline" class="tsd-kind-icon">NETWORK_<wbr>OFFLINE</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_src_jsonrpc_types_.request.html" class="tsd-kind-icon">Request</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
-						<a href="../modules/_network_.html#network_testnet" class="tsd-kind-icon">NETWORK_<wbr>TESTNET</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_src_jsonrpc_types_.response.html" class="tsd-kind-icon">Response</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
-						<a href="../modules/_network_.html#network_unknown" class="tsd-kind-icon">NETWORK_<wbr>UNKNOWN</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_src_jsonrpc_types_.html#jsonrpcmethod" class="tsd-kind-icon">Jsonrpc<wbr>Method</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_src_jsonrpc_types_.html#tag" class="tsd-kind-icon">Tag</a>
 					</li>
 				</ul>
 			</nav>
