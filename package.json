@@ -43,9 +43,9 @@
     "lint": "yarn run lint:tsc && yarn run lint:eslint && yarn run lint:prettier && yarn run lint:lockfile",
     "lint:tsc": "tsc --noEmit",
     "lint:eslint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx",
-    "lint:prettier": "prettier --check 'src/**/*.{ts,tsx}'",
+    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
     "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn github.com --validate-https --validate-checksum --validate-integrity",
-    "prettier": "prettier --write '**/*.{ts,tsx,js,json}'",
+    "prettier": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
     "fetch-networks": "ts-node --project tsconfig.scripts.json scripts/fetch-networks",
     "prepare": "yarn run build"
   },
@@ -78,7 +78,7 @@
     "ganache-core": "^2.10.2",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.2.11",
     "lockfile-lint": "^3.0.4",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
@@ -94,8 +94,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "husky": {
