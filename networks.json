@@ -3,10 +3,7 @@
     "name": "Ethereum Mainnet",
     "chain": "ETH",
     "network": "mainnet",
-    "rpc": [
-      "https://mainnet.infura.io/v3/bfea47cc97c440a687c8762553739a94",
-      "https://api.mycryptoapi.com/eth"
-    ],
+    "rpc": ["https://mainnet.infura.io/v3/bfea47cc97c440a687c8762553739a94", "https://api.mycryptoapi.com/eth"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Ether",
@@ -26,9 +23,7 @@
     "name": "xDAI Chain",
     "chain": "XDAI",
     "network": "mainnet",
-    "rpc": [
-      "https://dai.poa.network"
-    ],
+    "rpc": ["https://dai.poa.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "xDAI",
@@ -45,9 +40,7 @@
     "name": "EtherInc",
     "chain": "ETI",
     "network": "mainnet",
-    "rpc": [
-      "https://api.einc.io/jsonrpc/mainnet"
-    ],
+    "rpc": ["https://api.einc.io/jsonrpc/mainnet"],
     "faucets": [],
     "nativeCurrency": {
       "name": "EtherInc Ether",
@@ -64,12 +57,8 @@
     "name": "ThunderCore Mainnet",
     "chain": "TT",
     "network": "mainnet",
-    "rpc": [
-      "https://mainnet-rpc.thundercore.com"
-    ],
-    "faucets": [
-      "https://faucet.thundercore.com"
-    ],
+    "rpc": ["https://mainnet-rpc.thundercore.com"],
+    "faucets": ["https://faucet.thundercore.com"],
     "nativeCurrency": {
       "name": "ThunderCore Mainnet Ether",
       "symbol": "TT",
@@ -84,9 +73,7 @@
     "name": "Metadium Mainnet",
     "chain": "META",
     "network": "mainnet",
-    "rpc": [
-      "https://api.metadium.com/prod"
-    ],
+    "rpc": ["https://api.metadium.com/prod"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Metadium Mainnet Ether",
@@ -103,10 +90,7 @@
     "name": "IPOS Network",
     "chain": "IPOS",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc.iposlab.com",
-      "https://rpc2.iposlab.com"
-    ],
+    "rpc": ["https://rpc.iposlab.com", "https://rpc2.iposlab.com"],
     "faucets": [],
     "nativeCurrency": {
       "name": "IPOS Network Ether",
@@ -122,9 +106,7 @@
     "name": "Metadium Testnet",
     "chain": "META",
     "network": "testnet",
-    "rpc": [
-      "https://api.metadium.com/dev"
-    ],
+    "rpc": ["https://api.metadium.com/dev"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Metadium Testnet Ether",
@@ -140,9 +122,7 @@
     "name": "Fuse Mainnet",
     "chain": "FUSE",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc.fuse.io"
-    ],
+    "rpc": ["https://rpc.fuse.io"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Fuse",
@@ -158,9 +138,7 @@
     "name": "Ether-1",
     "chain": "ETHO",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc.ether1.org"
-    ],
+    "rpc": ["https://rpc.ether1.org"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Ether-1 Ether",
@@ -177,9 +155,7 @@
     "name": "Xerom",
     "chain": "XERO",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc.xerom.org"
-    ],
+    "rpc": ["https://rpc.xerom.org"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Xerom Ether",
@@ -195,9 +171,7 @@
     "name": "PepChain Churchill",
     "chain": "PEP",
     "network": "testnet",
-    "rpc": [
-      "https://churchill-rpc.pepchain.io"
-    ],
+    "rpc": ["https://churchill-rpc.pepchain.io"],
     "faucets": [],
     "nativeCurrency": {
       "name": "PepChain Churchill Ether",
@@ -213,12 +187,8 @@
     "name": "Lightstreams Testnet",
     "chain": "PHT",
     "network": "sirius",
-    "rpc": [
-      "https://node.sirius.lightstreams.io"
-    ],
-    "faucets": [
-      "https://discuss.lightstreams.network/t/request-test-tokens"
-    ],
+    "rpc": ["https://node.sirius.lightstreams.io"],
+    "faucets": ["https://discuss.lightstreams.network/t/request-test-tokens"],
     "nativeCurrency": {
       "name": "Lightstreams PHT",
       "symbol": "PHT",
@@ -233,9 +203,7 @@
     "name": "Atheios",
     "chain": "ATH",
     "network": "mainnet",
-    "rpc": [
-      "https://wallet.atheios.com:8797"
-    ],
+    "rpc": ["https://wallet.atheios.com:8797"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Atheios Ether",
@@ -252,9 +220,7 @@
     "name": "Lightstreams Mainnet",
     "chain": "PHT",
     "network": "mainnet",
-    "rpc": [
-      "https://node.mainnet.lightstreams.io"
-    ],
+    "rpc": ["https://node.mainnet.lightstreams.io"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Lightstreams PHT",
@@ -270,12 +236,8 @@
     "name": "ThunderCore Testnet",
     "chain": "TST",
     "network": "testnet",
-    "rpc": [
-      "https://testnet-rpc.thundercore.com"
-    ],
-    "faucets": [
-      "https://faucet-testnet.thundercore.com"
-    ],
+    "rpc": ["https://testnet-rpc.thundercore.com"],
+    "faucets": ["https://faucet-testnet.thundercore.com"],
     "nativeCurrency": {
       "name": "ThunderCore Testnet Ether",
       "symbol": "TST",
@@ -290,9 +252,7 @@
     "name": "IOLite",
     "chain": "ILT",
     "network": "mainnet",
-    "rpc": [
-      "https://net.iolite.io"
-    ],
+    "rpc": ["https://net.iolite.io"],
     "faucets": [],
     "nativeCurrency": {
       "name": "IOLite Ether",
@@ -308,9 +268,7 @@
     "name": "Teslafunds",
     "chain": "TSF",
     "network": "mainnet",
-    "rpc": [
-      "https://tsfapi.europool.me"
-    ],
+    "rpc": ["https://tsfapi.europool.me"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Teslafunds Ether",
@@ -326,9 +284,7 @@
     "name": "EtherGem",
     "chain": "EGEM",
     "network": "mainnet",
-    "rpc": [
-      "https://jsonrpc.egem.io/custom"
-    ],
+    "rpc": ["https://jsonrpc.egem.io/custom"],
     "faucets": [],
     "nativeCurrency": {
       "name": "EtherGem Ether",
@@ -345,9 +301,7 @@
     "name": "Expanse Network",
     "chain": "EXP",
     "network": "mainnet",
-    "rpc": [
-      "https://node.expanse.tech"
-    ],
+    "rpc": ["https://node.expanse.tech"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Expanse Network Ether",
@@ -364,9 +318,7 @@
     "name": "ELA-ETH-Sidechain Mainnet",
     "chain": "ETH",
     "network": "mainnet",
-    "rpc": [
-      "https://mainrpc.elaeth.io"
-    ],
+    "rpc": ["https://mainrpc.elaeth.io"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Ether",
@@ -382,9 +334,7 @@
     "name": "Akaroma",
     "chain": "AKA",
     "network": "mainnet",
-    "rpc": [
-      "https://remote.akroma.io"
-    ],
+    "rpc": ["https://remote.akroma.io"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Akaroma Ether",
@@ -400,12 +350,8 @@
     "name": "ELA-ETH-Sidechain Testnet",
     "chain": "ETH",
     "network": "testnet",
-    "rpc": [
-      "https://rpc.elaeth.io"
-    ],
-    "faucets": [
-      "https://faucet.elaeth.io/"
-    ],
+    "rpc": ["https://rpc.elaeth.io"],
+    "faucets": ["https://faucet.elaeth.io/"],
     "nativeCurrency": {
       "name": "Ether",
       "symbol": "ETH",
@@ -420,13 +366,8 @@
     "name": "Freight Trust Network",
     "chain": "EDI",
     "network": "freight & trade network",
-    "rpc": [
-      "http://13.57.207.168:3435",
-      "https://app.freighttrust.net/ftn/${API_KEY}"
-    ],
-    "faucets": [
-      "http://faucet.freight.sh"
-    ],
+    "rpc": ["http://13.57.207.168:3435", "https://app.freighttrust.net/ftn/${API_KEY}"],
+    "faucets": ["http://faucet.freight.sh"],
     "nativeCurrency": {
       "name": "Freight Trust Native",
       "symbol": "0xF",
@@ -441,9 +382,7 @@
     "name": "Webchain",
     "chain": "WEB",
     "network": "mainnet",
-    "rpc": [
-      "https://node1.webchain.network"
-    ],
+    "rpc": ["https://node1.webchain.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Webchain Ether",
@@ -459,9 +398,7 @@
     "name": "ARTIS sigma1",
     "chain": "ARTIS",
     "network": "sigma1",
-    "rpc": [
-      "https://rpc.sigma1.artis.network"
-    ],
+    "rpc": ["https://rpc.sigma1.artis.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "ARTIS sigma1 Ether",
@@ -477,9 +414,7 @@
     "name": "ARTIS tau1",
     "chain": "ARTIS",
     "network": "tau1",
-    "rpc": [
-      "https://rpc.tau1.artis.network"
-    ],
+    "rpc": ["https://rpc.tau1.artis.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "ARTIS tau1 Ether",
@@ -495,10 +430,7 @@
     "name": "Fantom Opera",
     "chain": "FTM",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc.fantom.network",
-      "https://fantomscan.io/rpc"
-    ],
+    "rpc": ["https://rpc.fantom.network", "https://fantomscan.io/rpc"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Fantom",
@@ -514,9 +446,7 @@
     "name": "High Performance Blockchain",
     "chain": "HPB",
     "network": "mainnet",
-    "rpc": [
-      "https://node.hpb.blue"
-    ],
+    "rpc": ["https://node.hpb.blue"],
     "faucets": [],
     "nativeCurrency": {
       "name": "High Performance Blockchain Ether",
@@ -532,9 +462,7 @@
     "name": "Auxilium Network Mainnet",
     "chain": "AUX",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc.auxilium.global"
-    ],
+    "rpc": ["https://rpc.auxilium.global"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Auxilium coin",
@@ -550,12 +478,8 @@
     "name": "Ethereum Testnet Ropsten",
     "chain": "ETH",
     "network": "ropsten",
-    "rpc": [
-      "https://ropsten.infura.io/v3/bfea47cc97c440a687c8762553739a94"
-    ],
-    "faucets": [
-      "https://faucet.ropsten.be?${ADDRESS}"
-    ],
+    "rpc": ["https://ropsten.infura.io/v3/bfea47cc97c440a687c8762553739a94"],
+    "faucets": ["https://faucet.ropsten.be?${ADDRESS}"],
     "nativeCurrency": {
       "name": "Ropsten Ether",
       "symbol": "ROP",
@@ -573,10 +497,7 @@
     "name": "RSK Mainnet",
     "chain": "RSK",
     "network": "mainnet",
-    "rpc": [
-      "https://public-node.rsk.co",
-      "https://mycrypto.rsk.co"
-    ],
+    "rpc": ["https://public-node.rsk.co", "https://mycrypto.rsk.co"],
     "faucets": [],
     "nativeCurrency": {
       "name": "RSK Mainnet Ether",
@@ -592,13 +513,8 @@
     "name": "RSK Testnet",
     "chain": "RSK",
     "network": "testnet",
-    "rpc": [
-      "https://public-node.testnet.rsk.co",
-      "https://mycrypto.testnet.rsk.co"
-    ],
-    "faucets": [
-      "https://faucet.testnet.rsk.co"
-    ],
+    "rpc": ["https://public-node.testnet.rsk.co", "https://mycrypto.testnet.rsk.co"],
+    "faucets": ["https://faucet.testnet.rsk.co"],
     "nativeCurrency": {
       "name": "RSK Testnet Ether",
       "symbol": "TRSK",
@@ -613,9 +529,7 @@
     "name": "Ethersocial Network",
     "chain": "ESN",
     "network": "mainnet",
-    "rpc": [
-      "https://api.esn.gonspool.com"
-    ],
+    "rpc": ["https://api.esn.gonspool.com"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Ethersocial Network Ether",
@@ -631,9 +545,7 @@
     "name": "Pirl",
     "chain": "PIRL",
     "network": "mainnet",
-    "rpc": [
-      "https://wallrpc.pirl.io"
-    ],
+    "rpc": ["https://wallrpc.pirl.io"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Pirl Ether",
@@ -649,12 +561,8 @@
     "name": "Lisinski",
     "chain": "CRO",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc-bitfalls1.lisinski.online"
-    ],
-    "faucets": [
-      "https://pipa.lisinski.online"
-    ],
+    "rpc": ["https://rpc-bitfalls1.lisinski.online"],
+    "faucets": ["https://pipa.lisinski.online"],
     "nativeCurrency": {
       "name": "Lisinski Ether",
       "symbol": "LISINSKI",
@@ -669,9 +577,7 @@
     "name": "Energi Mainnet",
     "chain": "NRG",
     "network": "mainnet",
-    "rpc": [
-      "https://nodeapi.gen3.energi.network"
-    ],
+    "rpc": ["https://nodeapi.gen3.energi.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Energi",
@@ -688,12 +594,8 @@
     "name": "Ethereum Testnet Rinkeby",
     "chain": "ETH",
     "network": "rinkeby",
-    "rpc": [
-      "https://rinkeby.infura.io/v3/bfea47cc97c440a687c8762553739a94"
-    ],
-    "faucets": [
-      "https://faucet.rinkeby.io"
-    ],
+    "rpc": ["https://rinkeby.infura.io/v3/bfea47cc97c440a687c8762553739a94"],
+    "faucets": ["https://faucet.rinkeby.io"],
     "nativeCurrency": {
       "name": "Rinkeby Ether",
       "symbol": "RIN",
@@ -711,13 +613,8 @@
     "name": "Ethereum Testnet Kovan",
     "chain": "ETH",
     "network": "kovan",
-    "rpc": [
-      "https://kovan.infura.io/v3/bfea47cc97c440a687c8762553739a94"
-    ],
-    "faucets": [
-      "https://faucet.kovan.network",
-      "https://gitter.im/kovan-testnet/faucet"
-    ],
+    "rpc": ["https://kovan.infura.io/v3/bfea47cc97c440a687c8762553739a94"],
+    "faucets": ["https://faucet.kovan.network", "https://gitter.im/kovan-testnet/faucet"],
     "nativeCurrency": {
       "name": "Kovan Ether",
       "symbol": "KOV",
@@ -732,12 +629,8 @@
     "name": "Athereum",
     "chain": "ATH",
     "network": "athereum",
-    "rpc": [
-      "https://ava.network:21015/ext/evm/rpc"
-    ],
-    "faucets": [
-      "http://athfaucet.ava.network//?address=${ADDRESS}"
-    ],
+    "rpc": ["https://ava.network:21015/ext/evm/rpc"],
+    "faucets": ["http://athfaucet.ava.network//?address=${ADDRESS}"],
     "nativeCurrency": {
       "name": "Athereum Ether",
       "symbol": "ATH",
@@ -752,9 +645,7 @@
     "name": "Energi Testnet",
     "chain": "NRG",
     "network": "testnet",
-    "rpc": [
-      "https://nodeapi.test3.energi.network"
-    ],
+    "rpc": ["https://nodeapi.test3.energi.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Energi",
@@ -771,15 +662,8 @@
     "name": "Ethereum Testnet Görli",
     "chain": "ETH",
     "network": "goerli",
-    "rpc": [
-      "https://rpc.goerli.mudit.blog/",
-      "https://rpc.slock.it/goerli ",
-      "https://goerli.prylabs.net/"
-    ],
-    "faucets": [
-      "https://goerli-faucet.slock.it/?address=${ADDRESS}",
-      "https://faucet.goerli.mudit.blog"
-    ],
+    "rpc": ["https://rpc.goerli.mudit.blog/", "https://rpc.slock.it/goerli ", "https://goerli.prylabs.net/"],
+    "faucets": ["https://goerli-faucet.slock.it/?address=${ADDRESS}", "https://faucet.goerli.mudit.blog"],
     "nativeCurrency": {
       "name": "Görli Ether",
       "symbol": "GOR",
@@ -797,9 +681,7 @@
     "name": "GoChain",
     "chain": "GO",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc.gochain.io"
-    ],
+    "rpc": ["https://rpc.gochain.io"],
     "faucets": [],
     "nativeCurrency": {
       "name": "GoChain Ether",
@@ -815,9 +697,7 @@
     "name": "Ethereum Classic Mainnet",
     "chain": "ETC",
     "network": "mainnet",
-    "rpc": [
-      "https://ethereumclassic.network"
-    ],
+    "rpc": ["https://ethereumclassic.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Ethereum Classic Ether",
@@ -834,13 +714,8 @@
     "name": "Aquachain",
     "chain": "AQUA",
     "network": "mainnet",
-    "rpc": [
-      "https://c.onical.org",
-      "https://tx.aquacha.in/api"
-    ],
-    "faucets": [
-      "https://aquacha.in/faucet"
-    ],
+    "rpc": ["https://c.onical.org", "https://tx.aquacha.in/api"],
+    "faucets": ["https://aquacha.in/faucet"],
     "nativeCurrency": {
       "name": "Aquachain Ether",
       "symbol": "AQUA",
@@ -856,9 +731,7 @@
     "name": "Ellaism",
     "chain": "ELLA",
     "network": "mainnet",
-    "rpc": [
-      "https://jsonrpc.ellaism.org"
-    ],
+    "rpc": ["https://jsonrpc.ellaism.org"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Ellaism Ether",
@@ -874,9 +747,7 @@
     "name": "ThaiChain",
     "chain": "TCH",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc.dome.cloud"
-    ],
+    "rpc": ["https://rpc.dome.cloud"],
     "faucets": [],
     "nativeCurrency": {
       "name": "ThaiChain Ether",
@@ -892,9 +763,7 @@
     "name": "Mix",
     "chain": "MIX",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc2.mix-blockchain.org:8647"
-    ],
+    "rpc": ["https://rpc2.mix-blockchain.org:8647"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Mix Ether",
@@ -910,12 +779,8 @@
     "name": "POA Network Sokol",
     "chain": "POA",
     "network": "sokol",
-    "rpc": [
-      "https://sokol.poa.network"
-    ],
-    "faucets": [
-      "https://faucet-sokol.herokuapp.com"
-    ],
+    "rpc": ["https://sokol.poa.network"],
+    "faucets": ["https://faucet-sokol.herokuapp.com"],
     "nativeCurrency": {
       "name": "POA Sokol Ether",
       "symbol": "POA",
@@ -930,9 +795,7 @@
     "name": "Musicoin",
     "chain": "MUSIC",
     "network": "mainnet",
-    "rpc": [
-      "https://mewapi.musicoin.tw"
-    ],
+    "rpc": ["https://mewapi.musicoin.tw"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Musicoin",
@@ -948,9 +811,7 @@
     "name": "Firenze test network",
     "chain": "ETH",
     "network": "testnet",
-    "rpc": [
-      "https://ethnode.primusmoney.com/firenze"
-    ],
+    "rpc": ["https://ethnode.primusmoney.com/firenze"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Firenze Ether",
@@ -966,10 +827,7 @@
     "name": "Ubiq Network Mainnet",
     "chain": "UBQ",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc.octano.dev",
-      "https://pyrus2.ubiqscan.io"
-    ],
+    "rpc": ["https://rpc.octano.dev", "https://pyrus2.ubiqscan.io"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Ubiq Ether",
@@ -985,9 +843,7 @@
     "name": "Callisto Mainnet",
     "chain": "CLO",
     "network": "mainnet",
-    "rpc": [
-      "https://clo-geth.0xinfra.com"
-    ],
+    "rpc": ["https://clo-geth.0xinfra.com"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Callisto Mainnet Ether",
@@ -1003,9 +859,7 @@
     "name": "TomoChain",
     "chain": "TOMO",
     "network": "mainnet",
-    "rpc": [
-      "https://core.tomocoin.io"
-    ],
+    "rpc": ["https://core.tomocoin.io"],
     "faucets": [],
     "nativeCurrency": {
       "name": "TomoChain Ether",
@@ -1021,13 +875,8 @@
     "name": "Nepal Blockchain Network",
     "chain": "YETI",
     "network": "mainnet",
-    "rpc": [
-      "https://api.nepalblockchain.dev",
-      "https://api.nepalblockchain.network"
-    ],
-    "faucets": [
-      "https://faucet.nepalblockchain.network"
-    ],
+    "rpc": ["https://api.nepalblockchain.dev", "https://api.nepalblockchain.network"],
+    "faucets": ["https://faucet.nepalblockchain.network"],
     "nativeCurrency": {
       "name": "Nepal Blockchain Network Ether",
       "symbol": "YETI",
@@ -1042,9 +891,7 @@
     "name": "POA Network Core",
     "chain": "POA",
     "network": "core",
-    "rpc": [
-      "https://core.poa.network"
-    ],
+    "rpc": ["https://core.poa.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "POA Network Core Ether",
