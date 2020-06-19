@@ -60,5 +60,5 @@ const run = async () => {
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(networks, null, 2), 'utf8');
 };
 
-// tslint:disable-next-line:no-console
+// eslint-disable-next-line no-console
 run().catch(console.error);
