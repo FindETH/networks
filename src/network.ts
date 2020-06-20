@@ -1,4 +1,4 @@
-import networks from '../networks.json';
+import networks from './config/networks.json';
 import { getVersion } from './jsonrpc';
 
 export interface Network {

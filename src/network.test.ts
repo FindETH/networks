@@ -1,4 +1,4 @@
-import networks from '../networks.json';
+import networks from './config/networks.json';
 import { getDefaultNetwork, getNetwork, getSupportedNetworks } from './network';
 
 jest.mock('./jsonrpc/api', () => ({

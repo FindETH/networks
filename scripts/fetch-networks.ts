@@ -5,7 +5,7 @@ import { INFURA_PROJECT_ID } from '../src/constants';
 
 const REPOSITORY_URL = 'https://github.com/ethereum-lists/chains.git';
 const REPOSITORY_PATH = join(__dirname, '../.cache/ethereum-lists/chains');
-const OUTPUT_PATH = join(__dirname, '../networks.json');
+const OUTPUT_PATH = join(__dirname, '../src/config/networks.json');
 
 const exec = (command: string): Promise<void> => {
   return new Promise((resolve, reject) => {
