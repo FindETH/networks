@@ -9,12 +9,12 @@
   "env": {
     "cjs": {
       "comments": false,
-      "ignore": ["**/*.d.ts", "**/__mocks__/**/*", "**/*.test.ts"],
+      "ignore": ["**/*.d.ts", "**/__mocks__/**/*", "**/*.test.ts", "**/__fixtures__/**/*"],
       "plugins": ["@babel/plugin-transform-modules-commonjs"]
     },
     "es": {
       "comments": false,
-      "ignore": ["**/*.d.ts", "**/__mocks__/**/*", "**/*.test.ts"]
+      "ignore": ["**/*.d.ts", "**/__mocks__/**/*", "**/*.test.ts", "**/__fixtures__/**/*"]
     },
     "test": {
       "presets": [
