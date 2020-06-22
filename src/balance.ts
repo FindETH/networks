@@ -6,46 +6,54 @@ import {
 } from '@mycrypto/eth-scan';
 import { BALANCE_OF_ID } from './constants';
 import { call, getBalance } from './jsonrpc/api';
-import { getNetwork } from './network';
+import { Network } from './network';
+import { loadBalance } from './utils';
 
 const SUPPORTED_NETWORK_IDS = [1, 3, 4, 5, 42];
 
 /**
- * Check if a provider is supported by eth-scan.
+ * Check if a network is supported by eth-scan.
  *
- * @param {string} provider
+ * @param {Network} network
  * @return {Promise<boolean>}
  */
-export const isEthScanSupported = async (provider: string): Promise<boolean> => {
-  const network = await getNetwork(provider);
-  if (!network) {
-    return false;
-  }
-
-  return SUPPORTED_NETWORK_IDS.includes(network.networkId);
+export const isEthScanSupported = async (network: Network): Promise<boolean> => {
+  return SUPPORTED_NETWORK_IDS.includes(network.chainId);
 };
 
 /**
  * Get Ether balances for multiple addresses.
  *
- * @param {string} provider
+ * @param {Network} network
  * @param {string[]} addresses
  * @return {Promise<Record<string, bigint>>}
  */
-export const getEtherBalances = async (provider: string, addresses: string[]): Promise<Record<string, bigint>> => {
-  if (await isEthScanSupported(provider)) {
-    return getEtherBalancesScanner(provider, addresses);
+export const getEtherBalances = async (network: Network, addresses: string[]): Promise<Record<string, bigint>> => {
+  if (await isEthScanSupported(network)) {
+    return loadBalance(getEtherBalancesScanner, network.rpc)(addresses);
   }
 
-  const balances = await Promise.all(addresses.map(address => getBalance(provider, address)));
+  const balances = await Promise.all(addresses.map(address => loadBalance(getBalance, network.rpc)(address)));
 
   return toBalanceMap(addresses, balances);
 };
 
-const getTokenBalance = async (provider: string, tokenAddress: string, address: string): Promise<bigint> => {
+/**
+ * Get the token balance for an individual address. This is only used if eth-scan is not available on the provided
+ * network.
+ *
+ * @param {Network} network
+ * @param {string} tokenAddress
+ * @param {string} address
+ * @return {Promise<bigint>}
+ */
+const getTokenBalance = async (network: Network, tokenAddress: string, address: string): Promise<bigint> => {
   const data = Buffer.concat([BALANCE_OF_ID, encode(['address'], [address])]).toString('hex');
 
-  const result = await call(provider, [
+  const result = await loadBalance(
+    call,
+    network.rpc
+  )([
     {
       to: tokenAddress,
       data: `0x${data}`
@@ -59,21 +67,21 @@ const getTokenBalance = async (provider: string, tokenAddress: string, address: 
 /**
  * Get token balances for multiple addresses, for a single token contract.
  *
- * @param {string} provider
+ * @param {Network} network
  * @param {string} tokenAddress
  * @param {string[]} addresses
  * @return {Promise<Record<string, bigint>>}
  */
 export const getTokenBalances = async (
-  provider: string,
+  network: Network,
   tokenAddress: string,
   addresses: string[]
 ): Promise<Record<string, bigint>> => {
-  if (await isEthScanSupported(provider)) {
-    return getTokenBalancesScanner(provider, addresses, tokenAddress);
+  if (await isEthScanSupported(network)) {
+    return loadBalance(getTokenBalancesScanner, network.rpc)(addresses, tokenAddress);
   }
 
-  const balances = await Promise.all(addresses.map(address => getTokenBalance(provider, tokenAddress, address)));
+  const balances = await Promise.all(addresses.map(address => getTokenBalance(network, tokenAddress, address)));
 
   return toBalanceMap(addresses, balances);
 };
