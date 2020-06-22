@@ -4,3 +4,4 @@ lib/
 typings/
 docs/
 .cache/
+yarn-error.log
