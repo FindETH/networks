@@ -1,14 +1,28 @@
-import { mockRandomForEach } from 'jest-mock-random';
-import { loadBalance } from './load-balance';
+import { loadBalance, roundRobin } from './load-balance';
+
+describe('roundRobin', () => {
+  it('loops through an array sequentially, infinitely', () => {
+    const iterator = roundRobin([1, 2, 3]);
+    expect(iterator.next().value).toBe(1);
+    expect(iterator.next().value).toBe(2);
+    expect(iterator.next().value).toBe(3);
+    expect(iterator.next().value).toBe(1);
+    expect(iterator.next().value).toBe(2);
+    expect(iterator.next().value).toBe(3);
+  });
+});
 
 describe('loadBalance', () => {
-  mockRandomForEach([0.1, 0.5, 0.9]);
-
-  it('randomizes the first argument for a function call', async () => {
+  it('loops through the first argument for a function call', async () => {
     const fn = jest.fn().mockImplementation(async () => 'bar');
-    await expect(loadBalance(fn, [1, 2, 3])('foo')).resolves.toBe('bar');
-    expect(fn).toHaveBeenCalledTimes(1);
+    const call = loadBalance(fn, [1, 2, 3]);
+
+    await expect(call('foo')).resolves.toBe('bar');
+    await expect(call('baz')).resolves.toBe('bar');
+
+    expect(fn).toHaveBeenCalledTimes(2);
     expect(fn).toHaveBeenCalledWith(1, 'foo');
+    expect(fn).toHaveBeenCalledWith(2, 'baz');
   });
 
   it('retries if the function call fails', async () => {

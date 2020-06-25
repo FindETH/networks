@@ -9,7 +9,21 @@ type Await<T> = T extends {
   : T;
 
 /**
- * Perform a function call with randomized first argument, useful for load balancing node calls. This will retry up to
+ * Loop through an array sequentially. This will create a generator that never completes.
+ *
+ * @template T
+ * @param {T[]} array
+ * @return {Generator<T, T>}
+ */
+export function* roundRobin<T>(array: T[]): Generator<T, T> {
+  for (const item of array) {
+    yield item;
+  }
+  return yield* roundRobin(array);
+}
+
+/**
+ * Perform a function call with sequenced first argument, useful for load balancing node calls. This will retry up to
  * `retries` times if an error occurs.
  *
  * @template F
@@ -23,13 +37,15 @@ export const loadBalance = <F extends (first: First, ...args: any[]) => Promise<
   values: First[],
   retries = 3
 ): ((...args: Parameters<OmitFirstArg<F>>) => Promise<Await<ReturnType<F>>>) => {
+  const iterator = roundRobin(values);
+
   const call = (retry: number, ...args: Parameters<OmitFirstArg<F>>): Promise<Await<ReturnType<F>>> => {
     if (retry >= retries) {
       throw new Error(`Function call failed after ${retries} retries.`);
     }
 
-    const randomValue = values[(values.length * Math.random()) | 0];
-    return fn(randomValue, ...args).catch(() => call(retry + 1, ...args));
+    const { value } = iterator.next();
+    return fn(value, ...args).catch(() => call(retry + 1, ...args));
   };
 
   return (...args) => {
