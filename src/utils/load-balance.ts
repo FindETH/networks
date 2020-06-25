@@ -15,7 +15,7 @@ type Await<T> = T extends {
  * @param {T[]} array
  * @return {Generator<T, T>}
  */
-function* roundRobin<T>(array: T[]): Generator<T, T> {
+export function* roundRobin<T>(array: T[]): Generator<T, T> {
   for (const item of array) {
     yield item;
   }

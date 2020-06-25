@@ -1,4 +1,16 @@
-import { loadBalance } from './load-balance';
+import { loadBalance, roundRobin } from './load-balance';
+
+describe('roundRobin', () => {
+  it('loops through an array sequentially, infinitely', () => {
+    const iterator = roundRobin([1, 2, 3]);
+    expect(iterator.next().value).toBe(1);
+    expect(iterator.next().value).toBe(2);
+    expect(iterator.next().value).toBe(3);
+    expect(iterator.next().value).toBe(1);
+    expect(iterator.next().value).toBe(2);
+    expect(iterator.next().value).toBe(3);
+  });
+});
 
 describe('loadBalance', () => {
   it('loops through the first argument for a function call', async () => {
