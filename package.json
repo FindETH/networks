@@ -75,7 +75,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jest": "^23.13.2",
-    "ganache-core": "^2.10.2",
+    "ganache-core": "^2.13.0",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "lint-staged": "^10.2.11",
@@ -88,8 +88,7 @@
     "typescript": "^3.7.3"
   },
   "resolutions": {
-    "ethereumjs-abi": "0.6.7",
-    "scrypt": "https://github.com/barrysteyn/node-scrypt.git#fb60a8d3"
+    "ethereumjs-abi": "0.6.7"
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
