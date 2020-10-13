@@ -1,3 +1,3 @@
-export * from './jsonrpc';
+export * from './api';
 export * from './balance';
 export * from './network';
