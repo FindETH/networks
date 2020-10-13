@@ -1,5 +1,5 @@
+import { getVersion } from './api';
 import networks from './config/networks.json';
-import { getVersion } from './jsonrpc';
 
 export interface Network {
   name: string;
