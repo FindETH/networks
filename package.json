@@ -44,7 +44,7 @@
     "lint:types": "tsc --noEmit",
     "lint:source": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx",
     "lint:format": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
-    "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn --validate-https --validate-checksum --validate-integrity",
+    "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn github.com --validate-https --validate-checksum --validate-integrity",
     "prettier": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
     "fetch-networks": "ts-node --project tsconfig.scripts.json scripts/fetch-networks",
     "prepare": "yarn run build"
