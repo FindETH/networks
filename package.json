@@ -44,8 +44,8 @@
     "lint:types": "tsc --noEmit",
     "lint:source": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx",
     "lint:format": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
-    "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn github.com --validate-https --validate-checksum --validate-integrity",
-    "prettier": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
+    "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn --validate-https --validate-checksum --validate-integrity",
+    "format": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
     "fetch-networks": "ts-node --project tsconfig.scripts.json scripts/fetch-networks",
     "prepare": "yarn run build"
   },
@@ -62,6 +62,7 @@
     "@babel/plugin-syntax-bigint": "^7.8.3",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-typescript": "^7.7.4",
+    "@nomiclabs/buidler": "^1.4.7",
     "@types/jest": "^24.0.23",
     "@types/node": "^14.0.13",
     "@typescript-eslint/eslint-plugin": "^3.3.0",
@@ -75,7 +76,6 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jest": "^23.13.2",
-    "ganache-core": "^2.13.0",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "lint-staged": "^10.2.11",
@@ -86,9 +86,6 @@
     "ts-node": "^8.5.4",
     "typedoc": "^0.15.5",
     "typescript": "^3.7.3"
-  },
-  "resolutions": {
-    "ethereumjs-abi": "0.6.7"
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
