@@ -14,7 +14,8 @@ import { loadBalance } from './utils';
  * @param {EthCall['params']} params
  * @return {string}
  */
-export const call = (network: Network, params: EthCall['params']) => loadBalance(jsonRpcCall, network.rpc)(params);
+export const call = (network: Network, params: EthCall['params']): Promise<string> =>
+  loadBalance(jsonRpcCall, network.rpc)(params);
 
 /**
  * Returns the current chain ID as number.
@@ -22,7 +23,7 @@ export const call = (network: Network, params: EthCall['params']) => loadBalance
  * @param {Network} network
  * @return {number}
  */
-export const getChainId = (network: Network) => loadBalance(jsonRpcGetChainId, network.rpc)();
+export const getChainId = (network: Network): Promise<number> => loadBalance(jsonRpcGetChainId, network.rpc)();
 
 /**
  * Returns the current network ID as number.
@@ -30,4 +31,4 @@ export const getChainId = (network: Network) => loadBalance(jsonRpcGetChainId, n
  * @param {Network} network
  * @return {number}
  */
-export const getVersion = (network: Network) => loadBalance(jsonRpcGetVersion, network.rpc)();
+export const getVersion = (network: Network): Promise<number> => loadBalance(jsonRpcGetVersion, network.rpc)();
