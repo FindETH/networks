@@ -1,4 +1,4 @@
-import { getDefaultNetwork } from '../network';
+import { getDefaultNetwork, getSupportedNetworks } from '../network';
 import { getNameHash, isValidAddress, normalise, resolveName } from './ens';
 
 // const server = new JsonRpcServer({
@@ -51,6 +51,16 @@ describe('resolveName', () => {
   it('resolves an ENS name', async () => {
     await expect(resolveName(getDefaultNetwork(), 'morten.eth')).resolves.toBe(
       '0x47170ceae335a9db7e96b72de630389669b33471'
+    );
+  });
+
+  it('returns undefined if an address does not resolve', async () => {
+    await expect(resolveName(getDefaultNetwork(), 'foo')).resolves.toBeUndefined();
+  });
+
+  it('throws if a network does not support ENS', async () => {
+    await expect(resolveName(getSupportedNetworks()[1], 'morten.eth')).rejects.toThrow(
+      'ENS not supported for this network'
     );
   });
 });
