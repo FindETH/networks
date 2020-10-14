@@ -6,11 +6,11 @@ import buidler from '@nomiclabs/buidler';
 import { JsonRpcServer } from '@nomiclabs/buidler/internal/buidler-evm/jsonrpc/server';
 import { call, getBalance, getChainId, getRequestData, getVersion } from './api';
 
-const HTTP_ENDPOINT = 'http://localhost:8545';
+const HTTP_ENDPOINT = 'http://localhost:8546';
 
 const server = new JsonRpcServer({
   hostname: '127.0.0.1',
-  port: 8545,
+  port: 8546,
   provider: buidler.network.provider
 });
 
