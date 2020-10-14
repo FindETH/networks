@@ -53,7 +53,14 @@ const run = async () => {
     .map(network => {
       return {
         ...network,
-        rpc: [...network.rpc.map((url: string) => url.replace('${INFURA_API_KEY}', INFURA_PROJECT_ID))]
+        rpc: [
+          ...network.rpc
+            .filter((url: string) => {
+              const { protocol } = new URL(url);
+              return protocol === 'https:';
+            })
+            .map((url: string) => url.replace('${INFURA_API_KEY}', INFURA_PROJECT_ID))
+        ]
       };
     });
 
