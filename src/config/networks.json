@@ -5,7 +5,6 @@
     "network": "mainnet",
     "rpc": [
       "https://mainnet.infura.io/v3/bfea47cc97c440a687c8762553739a94",
-      "wss://mainnet.infura.io/ws/v3/bfea47cc97c440a687c8762553739a94",
       "https://api.mycryptoapi.com/eth",
       "https://cloudflare-eth.com"
     ],
@@ -21,22 +20,14 @@
     "networkId": 1,
     "slip44": 60,
     "ens": {
-      "registry": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+      "registry": "0x314159265dd8dbb310642f98f50c066173c1259b"
     }
   },
   {
     "name": "xDAI Chain",
     "chain": "XDAI",
     "network": "mainnet",
-    "rpc": [
-      "https://rpc.xdaichain.com",
-      "https://xdai.poanetwork.dev",
-      "wss://rpc.xdaichain.com/wss",
-      "wss://xdai.poanetwork.dev/wss",
-      "http://xdai.poanetwork.dev",
-      "https://dai.poa.network",
-      "ws://xdai.poanetwork.dev:8546"
-    ],
+    "rpc": ["https://rpc.xdaichain.com", "https://xdai.poanetwork.dev", "https://dai.poa.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "xDAI",
@@ -151,7 +142,7 @@
     "name": "Diode Staging",
     "chain": "DIO",
     "network": "testnet",
-    "rpc": ["https://staging.diode.io:8443/", "wss://staging.diode.io:8443/ws"],
+    "rpc": ["https://staging.diode.io:8443/"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Staging Diodes",
@@ -248,7 +239,7 @@
     "name": "Matic Mainnet",
     "chain": "Matic",
     "network": "mainnet",
-    "rpc": ["https://rpc-mainnet.matic.network", "wss://ws-mainnet.matic.network"],
+    "rpc": ["https://rpc-mainnet.matic.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Matic",
@@ -264,7 +255,7 @@
     "name": "Diode Prenet",
     "chain": "DIO",
     "network": "mainnet",
-    "rpc": ["https://prenet.diode.io:8443/", "wss://prenet.diode.io:8443/ws"],
+    "rpc": ["https://prenet.diode.io:8443/"],
     "faucets": [],
     "nativeCurrency": {
       "name": "Diodes",
@@ -459,7 +450,7 @@
     "name": "Freight Trust Network",
     "chain": "EDI",
     "network": "freight & trade network",
-    "rpc": ["http://13.57.207.168:3435", "https://app.freighttrust.net/ftn/${API_KEY}"],
+    "rpc": ["https://app.freighttrust.net/ftn/${API_KEY}"],
     "faucets": ["http://faucet.freight.sh"],
     "nativeCurrency": {
       "name": "Freight Trust Native",
@@ -571,10 +562,7 @@
     "name": "Ethereum Testnet Ropsten",
     "chain": "ETH",
     "network": "ropsten",
-    "rpc": [
-      "https://ropsten.infura.io/v3/bfea47cc97c440a687c8762553739a94",
-      "wss://ropsten.infura.io/ws/v3/bfea47cc97c440a687c8762553739a94"
-    ],
+    "rpc": ["https://ropsten.infura.io/v3/bfea47cc97c440a687c8762553739a94"],
     "faucets": ["https://faucet.ropsten.be?${ADDRESS}"],
     "nativeCurrency": {
       "name": "Ropsten Ether",
@@ -707,10 +695,7 @@
     "name": "Ethereum Testnet Rinkeby",
     "chain": "ETH",
     "network": "rinkeby",
-    "rpc": [
-      "https://rinkeby.infura.io/v3/bfea47cc97c440a687c8762553739a94",
-      "wss://rinkeby.infura.io/ws/v3/bfea47cc97c440a687c8762553739a94"
-    ],
+    "rpc": ["https://rinkeby.infura.io/v3/bfea47cc97c440a687c8762553739a94"],
     "faucets": ["https://faucet.rinkeby.io"],
     "nativeCurrency": {
       "name": "Rinkeby Ether",
@@ -729,13 +714,7 @@
     "name": "Ethereum Testnet Kovan",
     "chain": "ETH",
     "network": "kovan",
-    "rpc": [
-      "https://kovan.poa.network",
-      "http://kovan.poa.network:8545",
-      "https://kovan.infura.io/v3/bfea47cc97c440a687c8762553739a94",
-      "wss://kovan.infura.io/ws/v3/bfea47cc97c440a687c8762553739a94",
-      "ws://kovan.poa.network:8546"
-    ],
+    "rpc": ["https://kovan.poa.network", "https://kovan.infura.io/v3/bfea47cc97c440a687c8762553739a94"],
     "faucets": ["https://faucet.kovan.network", "https://gitter.im/kovan-testnet/faucet"],
     "nativeCurrency": {
       "name": "Kovan Ether",
@@ -815,8 +794,7 @@
       "https://bsc-dataseed1.ninicoin.io",
       "https://bsc-dataseed2.ninicoin.io",
       "https://bsc-dataseed3.ninicoin.io",
-      "https://bsc-dataseed4.ninicoin.io",
-      "wss://bsc-ws-node.nariox.org"
+      "https://bsc-dataseed4.ninicoin.io"
     ],
     "faucets": [],
     "nativeCurrency": {
@@ -931,7 +909,7 @@
     "name": "POA Network Sokol",
     "chain": "POA",
     "network": "sokol",
-    "rpc": ["https://sokol.poa.network", "wss://sokol.poa.network/wss", "ws://sokol.poa.network:8546"],
+    "rpc": ["https://sokol.poa.network"],
     "faucets": ["https://faucet-sokol.herokuapp.com"],
     "nativeCurrency": {
       "name": "POA Sokol Ether",
@@ -995,7 +973,7 @@
     "name": "Matic Mumbai",
     "chain": "Matic",
     "network": "testnet",
-    "rpc": ["https://rpc-mumbai.matic.today", "wss://ws-mumbai.matic.today"],
+    "rpc": ["https://rpc-mumbai.matic.today"],
     "faucets": ["https://faucet.matic.network/"],
     "nativeCurrency": {
       "name": "Matic",
@@ -1082,12 +1060,7 @@
     "name": "POA Network Core",
     "chain": "POA",
     "network": "core",
-    "rpc": [
-      "https://core.poanetwork.dev",
-      "http://core.poanetwork.dev:8545",
-      "https://core.poa.network",
-      "ws://core.poanetwork.dev:8546"
-    ],
+    "rpc": ["https://core.poanetwork.dev", "https://core.poa.network"],
     "faucets": [],
     "nativeCurrency": {
       "name": "POA Network Core Ether",
