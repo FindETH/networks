@@ -9,7 +9,7 @@ const OUTPUT_PATH = join(__dirname, '../src/config/networks.json');
 
 const exec = (command: string): Promise<void> => {
   return new Promise((resolve, reject) => {
-    nodeExec(command, error => {
+    nodeExec(command, (error) => {
       if (error) {
         return reject(error);
       }
@@ -41,7 +41,7 @@ const run = async () => {
   const files = await fs.readdir(fullPath);
 
   const jsonObjects = await Promise.all(
-    files.map(async file => {
+    files.map(async (file) => {
       const filePath = join(fullPath, file);
       const content = await fs.readFile(filePath, 'utf8');
       return JSON.parse(content);
@@ -49,8 +49,8 @@ const run = async () => {
   );
 
   const networks = jsonObjects
-    .filter(network => network.rpc.length > 0)
-    .map(network => {
+    .filter((network) => network.rpc.length > 0)
+    .map((network) => {
       return {
         ...network,
         rpc: [

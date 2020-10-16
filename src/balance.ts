@@ -33,7 +33,7 @@ export const getEtherBalances = async (network: Network, addresses: string[]): P
     return loadBalance(getEtherBalancesScanner, network.rpc)(addresses);
   }
 
-  const balances = await Promise.all(addresses.map(address => loadBalance(getBalance, network.rpc)(address)));
+  const balances = await Promise.all(addresses.map((address) => loadBalance(getBalance, network.rpc)(address)));
 
   return toBalanceMap(addresses, balances);
 };
@@ -81,7 +81,7 @@ export const getTokenBalances = async (
     return loadBalance(getTokenBalancesScanner, network.rpc)(addresses, tokenAddress);
   }
 
-  const balances = await Promise.all(addresses.map(address => getTokenBalance(network, tokenAddress, address)));
+  const balances = await Promise.all(addresses.map((address) => getTokenBalance(network, tokenAddress, address)));
 
   return toBalanceMap(addresses, balances);
 };
