@@ -50,5 +50,5 @@ export const getNetwork = async (provider: string): Promise<Network | undefined>
   const supportedNetworks = getSupportedNetworks();
   const networkId = await getVersion(provider);
 
-  return supportedNetworks.find(item => item.networkId === networkId);
+  return supportedNetworks.find((item) => item.networkId === networkId);
 };

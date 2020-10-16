@@ -27,7 +27,7 @@ export const sendRequest = async <T extends JsonrpcMethod>(url: string, data: Re
       Accept: 'application/json'
     },
     body: JSON.stringify(data)
-  }).then(response => response.json());
+  }).then((response) => response.json());
 };
 
 /**
