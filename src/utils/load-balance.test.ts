@@ -1,3 +1,4 @@
+import { mockRandom } from 'jest-mock-random';
 import { loadBalance, roundRobin } from './load-balance';
 
 describe('roundRobin', () => {
@@ -14,6 +15,8 @@ describe('roundRobin', () => {
 
 describe('loadBalance', () => {
   it('loops through the first argument for a function call', async () => {
+    mockRandom([0.1, 0.2, 0.3]);
+
     const fn = jest.fn().mockImplementation(async () => 'bar');
     const call = loadBalance(fn, [1, 2, 3]);
 

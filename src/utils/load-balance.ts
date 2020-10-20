@@ -23,6 +23,21 @@ export function* roundRobin<T>(array: T[]): Generator<T, T> {
 }
 
 /**
+ * Randomly shuffles an array.
+ *
+ * @template Type
+ * @template Item
+ * @param {Type} array
+ * @return {Item[]}
+ */
+const shuffle = <Type extends Item[], Item>(array: Type): Item[] => {
+  return array
+    .map((value) => ({ sort: Math.random(), value }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+};
+
+/**
  * Perform a function call with sequenced first argument, useful for load balancing node calls. This will retry up to
  * `retries` times if an error occurs.
  *
@@ -37,7 +52,8 @@ export const loadBalance = <F extends (first: First, ...args: any[]) => Promise<
   values: First[],
   retries = 3
 ): ((...args: Parameters<OmitFirstArg<F>>) => Promise<Await<ReturnType<F>>>) => {
-  const iterator = roundRobin(values);
+  const shuffled = shuffle<First[], First>(values);
+  const iterator = roundRobin(shuffled);
 
   const call = (retry: number, ...args: Parameters<OmitFirstArg<F>>): Promise<Await<ReturnType<F>>> => {
     if (retry >= retries) {
