@@ -1,6 +1,6 @@
 {
   "name": "@findeth/networks",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Network functionality used by FindETH",
   "author": "Maarten Zuidhoorn <maarten@zuidhoorn.com>",
   "homepage": "https://github.com/FindETH/networks",
