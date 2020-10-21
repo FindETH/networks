@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer';
 import { encode } from '@findeth/abi';
-import { keccak256 } from '@findeth/secp256k1';
+import { keccak256 } from '@findeth/hdnode';
 import { toUnicode } from 'idna-uts46-hx';
 import { call } from '../api';
 import { ENS_ADDR_ID, ENS_RESOLVER_ID } from '../constants';
