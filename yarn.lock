@@ -1130,9 +1130,9 @@
     chalk "^4.0.0"
 
 "@mycrypto/eth-scan@^3.0.0":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@mycrypto/eth-scan/-/eth-scan-3.1.2.tgz#53bb0d5bddd53dc0f389c10e6635ce1a25d73e45"
-  integrity sha512-fysgL4OJoay1ZySFnoCQdnbRoMnqPb/h87IK/7FZ0BMMw1fBMZN9YfJG5h+xHSwvFAD4FdXspqimqhq9+51fVg==
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@mycrypto/eth-scan/-/eth-scan-3.2.1.tgz#4366e8d8b92f7d3d033f69561f1f388ed75e5025"
+  integrity sha512-zFw5RnnudYAad2ynlj5ywedMJ91+4q+QHEjBcmVaw+fXIwuHXSH4PWlrbxjaVbWDeV7n1sB4zWVBhGwkxq2AIw==
   dependencies:
     "@findeth/abi" "^0.3.1"
     isomorphic-unfetch "^3.1.0"
