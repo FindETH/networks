@@ -2,15 +2,15 @@
  * @jest-environment node
  */
 
-import buidler from '@nomiclabs/buidler';
-import { JsonRpcServer } from '@nomiclabs/buidler/internal/buidler-evm/jsonrpc/server';
+import hardhat from 'hardhat';
+import { JsonRpcServer } from 'hardhat/internal/hardhat-network/jsonrpc/server';
 import { TEST_NODE } from './__fixtures__/nodes';
 import { call, getChainId, getVersion } from './api';
 
 const server = new JsonRpcServer({
   hostname: '127.0.0.1',
-  port: 8545,
-  provider: buidler.network.provider
+  port: 18545,
+  provider: hardhat.network.provider
 });
 
 beforeAll(async () => {
