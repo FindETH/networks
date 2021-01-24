@@ -1,4 +1,5 @@
 import { encode } from '@findeth/abi';
+import { concat, toHex } from '@findeth/hdnode';
 import {
   getEtherBalances as getEtherBalancesScanner,
   getTokenBalances as getTokenBalancesScanner,
@@ -48,7 +49,7 @@ export const getEtherBalances = async (network: Network, addresses: string[]): P
  * @return {Promise<bigint>}
  */
 const getTokenBalance = async (network: Network, tokenAddress: string, address: string): Promise<bigint> => {
-  const data = Buffer.concat([BALANCE_OF_ID, encode(['address'], [address])]).toString('hex');
+  const data = toHex(concat([BALANCE_OF_ID, encode(['address'], [address])]));
 
   const result = await loadBalance(
     call,
