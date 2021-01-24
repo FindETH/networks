@@ -3,10 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;jsonrpc/api&quot; | @findeth/networks</title>
+	<title>jsonrpc/api | @findeth/networks</title>
 	<meta name="description" content="Documentation for @findeth/networks">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -53,13 +52,13 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../modules.html">@findeth/networks</a>
 				</li>
 				<li>
-					<a href="_jsonrpc_api_.html">&quot;jsonrpc/api&quot;</a>
+					<a href="jsonrpc_api.html">jsonrpc/api</a>
 				</li>
 			</ul>
-			<h1>Module &quot;jsonrpc/api&quot;</h1>
+			<h1>Module jsonrpc/api</h1>
 		</div>
 	</div>
 </header>
@@ -73,12 +72,12 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_jsonrpc_api_.html#call" class="tsd-kind-icon">call</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_jsonrpc_api_.html#getbalance" class="tsd-kind-icon">get<wbr>Balance</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_jsonrpc_api_.html#getchainid" class="tsd-kind-icon">get<wbr>Chain<wbr>Id</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_jsonrpc_api_.html#getrequestdata" class="tsd-kind-icon">get<wbr>Request<wbr>Data</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_jsonrpc_api_.html#getversion" class="tsd-kind-icon">get<wbr>Version</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_jsonrpc_api_.html#sendrequest" class="tsd-kind-icon">send<wbr>Request</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="jsonrpc_api.html#call" class="tsd-kind-icon">call</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="jsonrpc_api.html#getbalance" class="tsd-kind-icon">get<wbr>Balance</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="jsonrpc_api.html#getchainid" class="tsd-kind-icon">get<wbr>Chain<wbr>Id</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="jsonrpc_api.html#getrequestdata" class="tsd-kind-icon">get<wbr>Request<wbr>Data</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="jsonrpc_api.html#getversion" class="tsd-kind-icon">get<wbr>Version</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="jsonrpc_api.html#sendrequest" class="tsd-kind-icon">send<wbr>Request</a></li>
 							</ul>
 						</section>
 					</div>
@@ -90,13 +89,13 @@
 					<a name="call" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> call</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">call<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EthCall</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"params"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">call<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">{ </span>data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>from<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>gas<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>gasPrice<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Tag</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/networks/blob/1db57d8/src/jsonrpc/api.ts#L40">jsonrpc/api.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/networks/blob/a83405d/src/jsonrpc/api.ts#L40">jsonrpc/api.ts:40</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -110,7 +109,7 @@
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>params: <span class="tsd-signature-type">EthCall</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"params"</span><span class="tsd-signature-symbol">]</span></h5>
+									<h5>params: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">{ </span>data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>from<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>gas<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>gasPrice<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Tag</span><span class="tsd-signature-symbol">]</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -127,7 +126,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/networks/blob/1db57d8/src/jsonrpc/api.ts#L63">jsonrpc/api.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/networks/blob/a83405d/src/jsonrpc/api.ts#L63">jsonrpc/api.ts:63</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -158,7 +157,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/networks/blob/1db57d8/src/jsonrpc/api.ts#L51">jsonrpc/api.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/networks/blob/a83405d/src/jsonrpc/api.ts#L51">jsonrpc/api.ts:51</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -180,31 +179,31 @@
 					<a name="getrequestdata" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Request<wbr>Data</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Request<wbr>Data&lt;T&gt;<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"method"</span><span class="tsd-signature-symbol">]</span>, params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"params"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_jsonrpc_types_.request.html" class="tsd-signature-type">Request</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Request<wbr>Data&lt;T&gt;<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;method&quot;</span><span class="tsd-signature-symbol">]</span>, params<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;params&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/jsonrpc_types.request.html" class="tsd-signature-type" data-tsd-kind="Interface">Request</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/networks/blob/1db57d8/src/jsonrpc/api.ts#L4">jsonrpc/api.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/networks/blob/a83405d/src/jsonrpc/api.ts#L4">jsonrpc/api.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><a href="_jsonrpc_types_.html#jsonrpcmethod" class="tsd-signature-type">JsonrpcMethod</a></h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="jsonrpc_types.html#jsonrpcmethod" class="tsd-signature-type" data-tsd-kind="Type alias">JsonrpcMethod</a></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>method: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"method"</span><span class="tsd-signature-symbol">]</span></h5>
+									<h5>method: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;method&quot;</span><span class="tsd-signature-symbol">]</span></h5>
 								</li>
 								<li>
-									<h5>params: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"params"</span><span class="tsd-signature-symbol">]</span></h5>
+									<h5>params: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;params&quot;</span><span class="tsd-signature-symbol">]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_jsonrpc_types_.request.html" class="tsd-signature-type">Request</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/jsonrpc_types.request.html" class="tsd-signature-type" data-tsd-kind="Interface">Request</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -218,7 +217,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/networks/blob/1db57d8/src/jsonrpc/api.ts#L77">jsonrpc/api.ts:77</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/networks/blob/a83405d/src/jsonrpc/api.ts#L77">jsonrpc/api.ts:77</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -240,13 +239,13 @@
 					<a name="sendrequest" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> send<wbr>Request</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">send<wbr>Request&lt;T&gt;<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><a href="../interfaces/_jsonrpc_types_.request.html" class="tsd-signature-type">Request</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_jsonrpc_types_.response.html" class="tsd-signature-type">Response</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Request&lt;T&gt;<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><a href="../interfaces/jsonrpc_types.request.html" class="tsd-signature-type" data-tsd-kind="Interface">Request</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/jsonrpc_types.response.html" class="tsd-signature-type" data-tsd-kind="Interface">Response</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/networks/blob/1db57d8/src/jsonrpc/api.ts#L22">jsonrpc/api.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/networks/blob/a83405d/src/jsonrpc/api.ts#L22">jsonrpc/api.ts:22</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -258,7 +257,7 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><a href="_jsonrpc_types_.html#jsonrpcmethod" class="tsd-signature-type">JsonrpcMethod</a></h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="jsonrpc_types.html#jsonrpcmethod" class="tsd-signature-type" data-tsd-kind="Type alias">JsonrpcMethod</a></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -267,10 +266,10 @@
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>data: <a href="../interfaces/_jsonrpc_types_.request.html" class="tsd-signature-type">Request</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>data: <a href="../interfaces/jsonrpc_types.request.html" class="tsd-signature-type" data-tsd-kind="Interface">Request</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_jsonrpc_types_.response.html" class="tsd-signature-type">Response</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/jsonrpc_types.response.html" class="tsd-signature-type" data-tsd-kind="Interface">Response</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -279,75 +278,69 @@
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-					<li class="label tsd-is-external">
-						<span>Internals</span>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="___fixtures___nodes_.html">&quot;__fixtures__/nodes&quot;</a>
+						<a href="__fixtures___nodes.html">__fixtures__/nodes</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_api_.html">&quot;api&quot;</a>
+						<a href="api.html">api</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_balance_.html">&quot;balance&quot;</a>
+						<a href="balance.html">balance</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_constants_.html">&quot;constants&quot;</a>
+						<a href="constants.html">constants</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_index_.html">&quot;index&quot;</a>
+						<a href="index.html">index</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="jsonrpc.html">jsonrpc</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="_jsonrpc_api_.html">&quot;jsonrpc/api&quot;</a>
+						<a href="jsonrpc_api.html">jsonrpc/api</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_jsonrpc_index_.html">&quot;jsonrpc/index&quot;</a>
+						<a href="jsonrpc_types.html">jsonrpc/types</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_jsonrpc_types_.html">&quot;jsonrpc/types&quot;</a>
+						<a href="network.html">network</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_network_.html">&quot;network&quot;</a>
+						<a href="types_window.html">types/window</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_utils_ens_.html">&quot;utils/ens&quot;</a>
+						<a href="utils.html">utils</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_utils_index_.html">&quot;utils/index&quot;</a>
+						<a href="utils_ens.html">utils/ens</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_utils_load_balance_.html">&quot;utils/load-<wbr>balance&quot;</a>
-					</li>
-					<li class="label tsd-is-external">
-						<span>Externals</span>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="_config_networks_.html">&quot;config/networks&quot;</a>
+						<a href="utils_load_balance.html">utils/load-<wbr>balance</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_jsonrpc_api_.html#call" class="tsd-kind-icon">call</a>
+						<a href="jsonrpc_api.html#call" class="tsd-kind-icon">call</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_jsonrpc_api_.html#getbalance" class="tsd-kind-icon">get<wbr>Balance</a>
+						<a href="jsonrpc_api.html#getbalance" class="tsd-kind-icon">get<wbr>Balance</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_jsonrpc_api_.html#getchainid" class="tsd-kind-icon">get<wbr>Chain<wbr>Id</a>
+						<a href="jsonrpc_api.html#getchainid" class="tsd-kind-icon">get<wbr>Chain<wbr>Id</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_jsonrpc_api_.html#getrequestdata" class="tsd-kind-icon">get<wbr>Request<wbr>Data</a>
+						<a href="jsonrpc_api.html#getrequestdata" class="tsd-kind-icon">get<wbr>Request<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_jsonrpc_api_.html#getversion" class="tsd-kind-icon">get<wbr>Version</a>
+						<a href="jsonrpc_api.html#getversion" class="tsd-kind-icon">get<wbr>Version</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_jsonrpc_api_.html#sendrequest" class="tsd-kind-icon">send<wbr>Request</a>
+						<a href="jsonrpc_api.html#sendrequest" class="tsd-kind-icon">send<wbr>Request</a>
 					</li>
 				</ul>
 			</nav>
@@ -359,12 +352,10 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
