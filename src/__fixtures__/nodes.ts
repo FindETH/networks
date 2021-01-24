@@ -43,7 +43,7 @@ export const TEST_NODE: Network = {
   name: 'Ethereum Mainnet',
   chain: 'ETH',
   network: 'mainnet',
-  rpc: ['http://localhost:8545'],
+  rpc: ['http://localhost:18545'],
   faucets: [],
   nativeCurrency: {
     name: 'Ether',

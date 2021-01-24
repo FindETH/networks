@@ -36,12 +36,12 @@ describe('call', () => {
 
 describe('getChainId', () => {
   it('returns the chain ID for a node', async () => {
-    await expect(getChainId(TEST_NODE)).resolves.toBe(1);
+    await expect(getChainId(TEST_NODE)).resolves.toBe(31337);
   });
 });
 
 describe('getNetwork', () => {
   it('returns the network ID for a node', async () => {
-    await expect(getVersion(TEST_NODE)).resolves.toBe(1);
+    await expect(getVersion(TEST_NODE)).resolves.toBe(31337);
   });
 });
