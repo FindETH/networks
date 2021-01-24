@@ -2,15 +2,15 @@
  * @jest-environment node
  */
 
-import buidler from '@nomiclabs/buidler';
-import { JsonRpcServer } from '@nomiclabs/buidler/internal/buidler-evm/jsonrpc/server';
+import hardhat from 'hardhat';
+import { JsonRpcServer } from 'hardhat/internal/hardhat-network/jsonrpc/server';
 import { TEST_NODE } from './__fixtures__/nodes';
 import { call, getChainId, getVersion } from './api';
 
 const server = new JsonRpcServer({
   hostname: '127.0.0.1',
-  port: 8545,
-  provider: buidler.network.provider
+  port: 18545,
+  provider: hardhat.network.provider
 });
 
 beforeAll(async () => {
@@ -36,12 +36,12 @@ describe('call', () => {
 
 describe('getChainId', () => {
   it('returns the chain ID for a node', async () => {
-    await expect(getChainId(TEST_NODE)).resolves.toBe(31337);
+    await expect(getChainId(TEST_NODE)).resolves.toBe(1);
   });
 });
 
 describe('getNetwork', () => {
   it('returns the network ID for a node', async () => {
-    await expect(getVersion(TEST_NODE)).resolves.toBe(31337);
+    await expect(getVersion(TEST_NODE)).resolves.toBe(1);
   });
 });
