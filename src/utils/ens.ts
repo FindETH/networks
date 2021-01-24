@@ -1,6 +1,5 @@
-import { Buffer } from 'buffer';
 import { encode } from '@findeth/abi';
-import { keccak256, hexify } from '@findeth/hdnode';
+import { concat, fromUtf8, keccak256, toHex } from '@findeth/hdnode';
 import { toUnicode } from 'idna-uts46-hx';
 import { call } from '../api';
 import { ENS_ADDR_ID, ENS_RESOLVER_ID } from '../constants';
@@ -24,18 +23,18 @@ export const normalise = (name: string): string => {
  */
 export const getNameHash = (name: string): string => {
   if (!name) {
-    return `0x${Buffer.alloc(32, 0).toString('hex')}`;
+    return `0x${toHex(new Uint8Array(32).fill(0))}`;
   }
 
   const normalisedName = normalise(name);
   const labels = normalisedName.split('.').reverse();
 
   const hash = labels.reduce<Uint8Array>((buffer, label) => {
-    const labelHash = keccak256(Buffer.from(label, 'utf8'));
-    return keccak256(Buffer.from(Uint8Array.from([...buffer, ...labelHash])));
+    const labelHash = keccak256(fromUtf8(label));
+    return keccak256(concat([buffer, labelHash]));
   }, new Uint8Array(32));
 
-  return `0x${hexify(hash)}`;
+  return `0x${toHex(hash)}`;
 };
 
 /**
@@ -64,7 +63,7 @@ export const resolveName = async (network: Network, name: string): Promise<strin
   const nameHash = getNameHash(name);
   const encodedHash = encode(['bytes32'], [nameHash]);
 
-  const data = hexify(new Uint8Array([...ENS_RESOLVER_ID, ...encodedHash]));
+  const data = toHex(concat([ENS_RESOLVER_ID, encodedHash]));
   const rawResolverAddress = await call(network, [
     {
       to: network.ens?.registry,
@@ -78,7 +77,7 @@ export const resolveName = async (network: Network, name: string): Promise<strin
     return;
   }
 
-  const resolverData = hexify(Uint8Array.from([...ENS_ADDR_ID, ...encodedHash]));
+  const resolverData = toHex(concat([ENS_ADDR_ID, encodedHash]));
   const rawAddress = await call(network, [
     {
       to: resolverAddress,
