@@ -50,7 +50,7 @@
     "prepare": "yarn run build"
   },
   "dependencies": {
-    "@findeth/abi": "^0.3.1",
+    "@findeth/abi": "^0.4.1",
     "@mycrypto/eth-scan": "^3.0.0",
     "idna-uts46-hx": "^3.3.0",
     "isomorphic-unfetch": "^3.0.0"
