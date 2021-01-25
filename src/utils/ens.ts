@@ -1,5 +1,4 @@
-import { encode } from '@findeth/abi';
-import { concat, fromUtf8, keccak256, toHex } from '@findeth/hdnode';
+import { encode, concat, fromUtf8, keccak256, toHex } from '@findeth/abi';
 import { toUnicode } from 'idna-uts46-hx';
 import { call } from '../api';
 import { ENS_ADDR_ID, ENS_RESOLVER_ID } from '../constants';

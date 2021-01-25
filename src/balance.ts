@@ -1,5 +1,4 @@
-import { encode } from '@findeth/abi';
-import { concat, toHex } from '@findeth/hdnode';
+import { encode, concat, toHex } from '@findeth/abi';
 import {
   getEtherBalances as getEtherBalancesScanner,
   getTokenBalances as getTokenBalancesScanner,
